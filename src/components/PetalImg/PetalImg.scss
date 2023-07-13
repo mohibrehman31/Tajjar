@@ -1,0 +1,27 @@
+.petal-img {
+  width: 200px;
+  height: 200px;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+  }
+  
+  &.top-left-corner-zero img {
+    border-top-left-radius: 0;
+  }
+  
+  &.top-right-corner-zero img {
+    border-top-right-radius: 0;
+  }
+  
+  &.bottom-left-corner-zero img {
+    border-bottom-left-radius: 0;
+  }
+  
+  &.bottom-right-corner-zero img {
+    border-bottom-right-radius: 0;
+  }
+}

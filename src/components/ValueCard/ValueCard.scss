@@ -1,0 +1,48 @@
+.card {
+    width: 262px;
+    height: 285px;
+    border: 1px solid #E2E5EF;
+    border-radius: 4px;
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    .imagecontainer {
+      width: 140px;
+      height: 140px;
+      border-radius: 70px;
+      background-image: var(--image-url);
+      background-size: cover;
+      background-position: center;
+    }
+  
+    .captionContainer {
+      width: 50%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  
+      .caption {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: #000;
+        text-align: center;
+      }
+    }
+  
+    .readMoreLink {
+      font-family: 'Poppins', sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      color: #000;
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+  

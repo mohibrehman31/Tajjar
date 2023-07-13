@@ -1,0 +1,69 @@
+@import "src/sass/style.scss";
+.main-container {
+  height: 300vh;
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    height: 500px;
+    .image-container {
+      width: 150px;
+      height: 150px;
+    }
+    .front-container {
+      width: 500px;
+      height: 200px;
+      margin-top: 10%;
+      .heading {
+        width: 100%;
+        height: 100%;
+        color: black;
+        font-family: Poppins;
+        font-size: 42px;
+        font-weight: $semibold-weight;
+        overflow-wrap: break-word;
+      }
+      .subheading {
+        width: 100%;
+        .heading1 {
+          display: flex;
+          .subtext-image {
+            width: 25px;
+            height: 25px;
+          }
+          .text {
+            margin-left: 10px;
+            font-weight: $regular-weight;
+            font-size: 14px;
+            line-height: 16px;
+            font-family: Poppins;
+            color: $sub-text;
+          }
+        }
+        .heading2 {
+          display: flex;
+          margin-top: 10px;
+          .subtext-image {
+            width: 25px;
+            height: 25px;
+          }
+          .text {
+            margin-left: 10px;
+            font-weight: $regular-weight;
+            font-size: 14px;
+            line-height: 16px;
+            font-family: Poppins;
+            color: $sub-text;
+          }
+        }
+      }
+    }
+  }
+}
+.about {
+  display: flex;
+}

@@ -1,0 +1,22 @@
+
+.submit-posting-page{
+
+}
+
+.submit-posting-body{
+    /* margin-top: 11vh; */
+    margin: 5vh 5vw 0vh 5vw;
+    font-family: "Roboto";
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    font-size: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh 0px;
+    background-color: #80eccf;
+    border-radius: 5vw 15vw;
+    
+}

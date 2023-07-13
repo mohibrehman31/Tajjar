@@ -15,11 +15,11 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
 
 export default function Payments() {
   const [rowsPerPage, setRowsPerPage] = useState(5);
@@ -27,15 +27,13 @@ export default function Payments() {
 
   const [paymentFilter, setPaymentFilter] = useState<string>("");
 
-
   const columns = [
-    "Posting Id",
     "User Name",
-    "User Name",
-    "Cost",
-    "Bidding Status",
-    "Bid Type",
-    "Added Dete",
+    "Bank",
+    "Branch",
+    "Amount",
+    "Verified",
+    "Added Details",
     "Details",
   ];
 
@@ -66,11 +64,11 @@ export default function Payments() {
   };
 
   return (
-    <div className="bids-page">
-      <div className="bids-body">
-        <div className="bids-options-container">
-          <div className="filter-container">
-            <FormControl sx={{width: "140px", marginRight: 2 }} size="small">
+    <div className="payments-page">
+      <div className="payments-body">
+        <div className="payments-options-container">
+
+            <FormControl sx={{ width: "150px", marginRight: 2 }} size="small">
               <InputLabel id="demo-select-small-label">
                 Payment Filter
               </InputLabel>
@@ -89,11 +87,9 @@ export default function Payments() {
               </Select>
             </FormControl>
 
-            <LocalizationProvider dateAdapter={AdapterDayjs} >
-        <DatePicker label="Date filter" sx={{ marginLeft: 2}}/>
-    </LocalizationProvider>
-
-          </div>
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DatePicker label="Date filter" sx={{ marginLeft: 2 }} />
+            </LocalizationProvider>
 
         </div>
 
@@ -103,7 +99,12 @@ export default function Payments() {
             className="tfoot"
             style={{ boxShadow: "0px 10px 50px rgba(0, 0, 0, 0.35)" }}
           >
-            <Table stickyHeader aria-label="sticky table" className="tfoot" size="md">
+            <Table
+              stickyHeader
+              aria-label="sticky table"
+              className="tfoot"
+              size="md"
+            >
               <TableHead>
                 <TableRow>
                   {columns.map((column, index) => (

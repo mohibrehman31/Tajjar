@@ -18,17 +18,13 @@ import Select from "@mui/material/Select";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { useNavigate } from 'react-router-dom'
+
 import Button from "@mui/material/Button";
 
-export default function Bids() {
+export default function AddBids() {
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [page, setPage] = useState(0);
 
-  const [statusFilter, setStatusFilter] = useState<string>("");
-  const [bidTypeFilter, setBidtypeFilter] = useState<string>("");
-
-  const navigate = useNavigate();
 
   const columns = [
     "Posting Id",
@@ -67,60 +63,13 @@ export default function Bids() {
   };
 
   return (
-    <div className="bids-page">
-      <div className="bids-body">
-        <div className="bids-options-container">
-          <div className="filter-container">
-            <FormControl sx={{ width: "140px", marginRight: 2 }} size="small">
-              <InputLabel id="demo-select-small-label">
-                Status Filter
-              </InputLabel>
-              <Select
-                labelId="demo-select-small-label"
-                id="demo-select-small"
-                value={statusFilter}
-                label="Status Filter"
-                onChange={(e) => setStatusFilter(e.target.value)}
-              >
-                <MenuItem value="None">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem value="Pending">Pending</MenuItem>
-                <MenuItem value="Bidden">Bidden</MenuItem>
-                <MenuItem value="Approved">Approved</MenuItem>
-                <MenuItem value="Rejected">Rejected</MenuItem>
-                <MenuItem value="Payment Added">Payment Added</MenuItem>
-                <MenuItem value="Completed">Completed</MenuItem>
-              </Select>
-            </FormControl>
+    <div className="add-bids-page">
+      <div className="add-bids-body">
 
-            <FormControl sx={{ width: 150 }} size="small">
-              <InputLabel id="demo-select-small-label">
-                Bid Type Filter
-              </InputLabel>
-              <Select
-                labelId="demo-select-small-label"
-                id="demo-select-small"
-                value={bidTypeFilter}
-                label="Bid Type Filter"
-                onChange={(e) => setBidtypeFilter(e.target.value)}
-              >
-                <MenuItem value="None">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem value="Posted">Posted</MenuItem>
-                <MenuItem value="Received">Received</MenuItem>
-              </Select>
-            </FormControl>
-
+        <div className="add-bids-options-container">
             <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <DatePicker label="Date filter" sx={{ marginLeft: 2 }} />
+              <DatePicker label="Date filter"/>
             </LocalizationProvider>
-          </div>
-
-          <div>
-            <Button variant="outlined" onClick={() => navigate("/User/AddBids") }>Add Bid</Button>
-          </div>
         </div>
 
         <Paper sx={{ width: "80%", overflow: "hidden" }}>

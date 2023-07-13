@@ -21,7 +21,7 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { useNavigate } from 'react-router-dom'
 import Button from "@mui/material/Button";
 
-export default function Bids() {
+export default function Postings() {
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [page, setPage] = useState(0);
 
@@ -29,13 +29,10 @@ export default function Bids() {
   const [bidTypeFilter, setBidtypeFilter] = useState<string>("");
 
   const navigate = useNavigate();
-
   const columns = [
-    "Posting Id",
-    "User Name",
-    "Cost",
-    "Bidding Status",
-    "Bid Type",
+    "Posting Type",
+    "Commodity",
+    "Posting Status",
     "Added Dete",
     "Details",
   ];
@@ -67,10 +64,10 @@ export default function Bids() {
   };
 
   return (
-    <div className="bids-page">
-      <div className="bids-body">
-        <div className="bids-options-container">
-          <div className="filter-container">
+    <div className="postings-page">
+      <div className="postings-body">
+        <div className="postings-options-container">
+          <div className="postings-filter-container">
             <FormControl sx={{ width: "140px", marginRight: 2 }} size="small">
               <InputLabel id="demo-select-small-label">
                 Status Filter
@@ -119,7 +116,7 @@ export default function Bids() {
           </div>
 
           <div>
-            <Button variant="outlined" onClick={() => navigate("/User/AddBids") }>Add Bid</Button>
+            <Button variant="outlined" onClick={() => navigate("/User/SubmitPosting")}>Add Posting</Button>
           </div>
         </div>
 

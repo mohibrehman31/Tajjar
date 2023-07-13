@@ -8,15 +8,19 @@ import payment from '../../assets/payment.png'
 import logout from '../../assets/logout.png'
 import { useNavigate } from 'react-router-dom'
 
+interface propType{
+  breadcrumb: () => void
+}
 
-export default function UserSidebar() {
+
+export default function UserSidebar({breadcrumb}: propType) {
 
   const [activeTab, setActiveTab] = useState(0)
   const navigate = useNavigate();
 
   const changeTab = (tabId: number, page: string) => {
-    console.log(page)
     setActiveTab(tabId)
+    breadcrumb(page)
     navigate("/User/" + page) 
   }
 

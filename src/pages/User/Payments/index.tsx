@@ -21,12 +21,12 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import Button from '@mui/material/Button';
 
-export default function Bids() {
+export default function Payments() {
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [page, setPage] = useState(0);
 
-  const [statusFilter, setStatusFilter] = useState<string>("");
-  const [bidTypeFilter, setBidtypeFilter] = useState<string>("");
+  const [paymentFilter, setPaymentFilter] = useState<string>("");
+
 
   const columns = [
     "Posting Id",
@@ -72,43 +72,20 @@ export default function Bids() {
           <div className="filter-container">
             <FormControl sx={{width: "140px", marginRight: 2 }} size="small">
               <InputLabel id="demo-select-small-label">
-                Status Filter
+                Payment Filter
               </InputLabel>
               <Select
                 labelId="demo-select-small-label"
                 id="demo-select-small"
-                value={statusFilter}
-                label="Status Filter"
-                onChange={(e) => setStatusFilter(e.target.value)}
+                value={paymentFilter}
+                label="Payment Filter"
+                onChange={(e) => setPaymentFilter(e.target.value)}
               >
                 <MenuItem value="None">
                   <em>None</em>
                 </MenuItem>
-                <MenuItem value="Pending">Pending</MenuItem>
-                <MenuItem value="Bidden">Bidden</MenuItem>
-                <MenuItem value="Approved">Approved</MenuItem>
-                <MenuItem value="Rejected">Rejected</MenuItem>
-                <MenuItem value="Payment Added">Payment Added</MenuItem>
-                <MenuItem value="Completed">Completed</MenuItem>
-              </Select>
-            </FormControl>
-
-            <FormControl sx={{ width: 150 }} size="small">
-              <InputLabel id="demo-select-small-label">
-                Bid Type Filter
-              </InputLabel>
-              <Select
-                labelId="demo-select-small-label"
-                id="demo-select-small"
-                value={bidTypeFilter}
-                label="Bid Type Filter"
-                onChange={(e) => setBidtypeFilter(e.target.value)}
-              >
-                <MenuItem value="None">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem value="Posted">Posted</MenuItem>
-                <MenuItem value="Received">Received</MenuItem>
+                <MenuItem value="Pending">Yes</MenuItem>
+                <MenuItem value="Bidden">No</MenuItem>
               </Select>
             </FormControl>
 
@@ -118,9 +95,6 @@ export default function Bids() {
 
           </div>
 
-          <div>
-            <Button variant="outlined">Add Bid</Button>
-          </div>
         </div>
 
         <Paper sx={{ width: "80%", overflow: "hidden" }}>

@@ -5,6 +5,8 @@ import sidebar from "src/assets/sidebar.png";
 import { Routes, Route } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Bids from "./Bids";
+import Payments from "./Payments";
+
 
 export default function User() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -23,6 +25,7 @@ export default function User() {
         <Routes>
           <Route path="/Dashboard" element={<Dashboard />} />
           <Route path="/Bids" element={<Bids />} />
+          <Route path="/Payments" element={<Payments/>} />
         </Routes>
       </div>
     </div>

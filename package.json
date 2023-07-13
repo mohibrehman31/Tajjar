@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.13.7",
     "@mui/joy": "^5.0.0-alpha.86",
+    "@mui/x-date-pickers": "^6.10.0",
     "antd": "^5.7.0",
     "lord-icon-element": "^4.1.1",
     "lottie-web": "^5.12.2",

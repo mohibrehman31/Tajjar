@@ -18,11 +18,11 @@ const postingType: {
     [key: string]: {
       type: string;
       options?: string[];
-      extension?: { 
+      extension?: {
         [key: string]: {
-        type: string;
-        options?: string[];
-        }
+          type: string;
+          options?: string[];
+        };
       };
     };
   };
@@ -39,15 +39,13 @@ const postingType: {
       options: ["Containerized", "Break Bulk", "Bulk"],
       extension: {
         Containerized: {
-        type: "select",
-        options: ["FCL", "LCL"],
-        }
+          type: "select",
+          options: ["FCL", "LCL"],
+        },
       },
     },
   },
 };
-
-
 
 interface userSelectionType {
   [key: string]: string;
@@ -67,6 +65,7 @@ export default function SubmitPosting() {
       [field]: value,
     };
     setSelection(newChange);
+    // console.log(postingType.General["Load Type"].extension?.["Containerized"].options)
   };
 
   return (
@@ -97,59 +96,35 @@ export default function SubmitPosting() {
         </Box>
 
         <div className="submit-posting-form">
-          <FormControl sx={{ width: "150px" }} size="small">
-            <InputLabel id="demo-simple-select-label">Posting Type</InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={userSelection["posting_type"]}
-              label="Posting Type"
-              onChange={(e) => handleChange("posting_type", e.target.value)}
-            >
-              {Object.keys(postingType).map((type: string, index: number) => (
-                <MenuItem key={index} value={type}>
-                  {type}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-          {userSelection.posting_type &&
-            Object.keys(postingType[userSelection.posting_type]).map(
-              (type: string, index) =>
-                postingType[userSelection.posting_type][type].type ===
-                "select" ? (
-                  <FormControl sx={{ width: "150px" }} size="small" key={index}>
-                    <InputLabel id="demo-simple-select-label">
-                      {type}
-                    </InputLabel>
-                    <Select
-                      labelId="demo-simple-select-label"
-                      id="demo-simple-select"
-                      value={userSelection[type]}
-                      label={type}
-                      onChange={(e) => handleChange(type, e.target.value)}
-                    >
-                      {postingType[userSelection.posting_type][
-                        type
-                      ].options?.map((type, index) => (
-                        <MenuItem key={index} value={type}>
-                          {type}
-                        </MenuItem>
-                      ))}
-                    </Select>
-                  </FormControl>
-                ) : (
-                  <TextField
-                    id="filled-basic"
-                    label={type}
-                    variant="filled"
-                    sx={{ width: "150px" }}
-                    size="small"
-                    value={userSelection[type]}
-                    onChange={(e) => handleChange(type, e.target.value)}
-                  />
-                )
+          <div className="step1">
+            <FormControl sx={{ width: "150px" }} size="small">
+              <InputLabel id="demo-simple-select-label">
+                Posting Type
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={userSelection["posting_type"]}
+                label="Posting Type"
+                onChange={(e) => handleChange("posting_type", e.target.value)}
+              >
+                <MenuItem value={"General"}>General</MenuItem>
+                <MenuItem value={"Import"}>Import</MenuItem>
+                <MenuItem value={"Export"}>Export</MenuItem>
+              </Select>
+            </FormControl>
+            {userSelection["posting_type"] === "General" && (
+              <TextField
+                id="filled-basic"
+                label={userSelection["pickup"]}
+                variant="filled"
+                sx={{ width: "150px" }}
+                size="small"
+                value={userSelection["pickup"]}
+                onChange={(e) => handleChange("pickup", e.target.value)}
+              />
             )}
+          </div>
         </div>
 
         <Button

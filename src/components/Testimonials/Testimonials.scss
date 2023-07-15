@@ -1,0 +1,33 @@
+.testimonials {
+    position: relative;
+      .heading-container {
+        width: 460px;
+        height: auto;
+        position: relative;
+        z-index: 0;
+        
+        .heading-content {
+          color: #F0F2FF;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 600;
+          font-size: 60px;
+        }
+      }
+      
+      .subheading-container {
+        width: 300px;
+        height: auto;
+        position: absolute;
+        top: 30%;
+        z-index: 1;
+        
+        .subheading {
+          color: #0340AD;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 500;
+          font-size: 30px;
+        }
+      }
+  }
+  
+  

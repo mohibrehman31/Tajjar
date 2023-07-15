@@ -1,15 +1,18 @@
 import "./index.css";
 import { useState } from "react";
-import dashboard from "../../assets/dashboard.png";
-import bid from "../../assets/bid.png";
-import postings from "../../assets/postings.png";
-import addBid from "../../assets/addBid.png";
-import payment from "../../assets/payment.png";
-import logout from "../../assets/logout.png";
+import { Dispatch, SetStateAction } from "react";
+import {
+  dashboard,
+  bid,
+  postings,
+  addBid,
+  payment,
+  logout,
+} from "src/assets/Images/";
 import { useNavigate } from "react-router-dom";
 
 interface propType {
-  breadcrumb: () => void;
+  breadcrumb: Dispatch<SetStateAction<string>>;
 }
 
 export default function UserSidebar({ breadcrumb }: propType) {
@@ -18,6 +21,7 @@ export default function UserSidebar({ breadcrumb }: propType) {
 
   const changeTab = (tabId: number, page: string) => {
     setActiveTab(tabId);
+    // breadcrumb(page);
     breadcrumb(page);
     navigate("/User/" + page);
   };

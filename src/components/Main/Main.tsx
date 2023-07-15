@@ -13,7 +13,7 @@ import img6 from "src/assets/Images/img6.jpg";
 import img7 from "src/assets/Images/img7.jpg";
 import img8 from "src/assets/Images/img8.jpg";
 import Swipeslider from "src/components/SwiperSlider/Swiper";
-import Testimonials from "src/components/Testimonials/Testimonials";
+import TestimonialSlider from "src/components/TestimonialSlider/TestimonialSlider";
 export const Main = () => {
   const ValuesContainer = () => {
     return (
@@ -66,14 +66,18 @@ export const Main = () => {
   };
 
   const TestimonialsContainer = () => {
-    return (
-      <div className="testimonials-container">
-        <div className="heading-container">
-          <h1 className="heading-content">Testimonials</h1>
-        </div>
+    return(
+      <div className = "testimonials-container">
+      <div className = "heading-container">
+        <h1 className = "heading-content">
+          Testimonials
+        </h1>
       </div>
-    );
-  };
+      <TestimonialSlider/>
+    </div>
+    )
+  }
+
   const items: TabsProps["items"] = [
     {
       key: "1",
@@ -222,10 +226,11 @@ export const Main = () => {
       </div>
       <ValuesContainer />
       <OurServicesContainer />
-      <Testimonials />
       <div className="carousel">
         <Tabs defaultActiveKey="1" items={items} />
       </div>
+      <TestimonialsContainer/>
+      <div className="partners-container"></div>
     </>
   );
 };

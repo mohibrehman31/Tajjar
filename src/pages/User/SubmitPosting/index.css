@@ -16,7 +16,38 @@
     justify-content: center;
     align-items: center;
     padding: 10vh 0px;
-    background-color: #80eccf;
-    border-radius: 5vw 15vw;
+    background-color: #bcc2fc;
+    border-radius: 5vw 10vw;
     
+}
+
+.css-1vyamtt-MuiStepLabel-labelContainer{
+    color: #bcc2fc !important;
+}
+.css-1hv8oq8-MuiStepLabel-label.Mui-completed {
+    color: #bcc2fc !important;
+}
+.css-1hv8oq8-MuiStepLabel-label.Mui-active{
+    color: white !important;
+}
+
+.css-z7uhs0-MuiStepConnector-line{
+    border-color: black !important;
+}
+
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active{
+    color: white !important;
+}
+
+.css-117w1su-MuiStepIcon-text{
+    fill: black !important;
+    font-size: 0.8rem !important;
+}
+
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
+    color: white !important;
+}
+
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root{
+    color: #a8befa !important;
 }

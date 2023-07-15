@@ -1,4 +1,4 @@
-import { Container, Interactions, Time } from "src/assets/Images";
+import { Container, Interactions, Time, Image2 } from "src/assets/Images";
 import type { TabsProps } from "antd";
 import { Tabs } from "antd";
 import "./Main.scss";
@@ -14,6 +14,8 @@ import img7 from "src/assets/Images/img7.jpg";
 import img8 from "src/assets/Images/img8.jpg";
 import Swipeslider from "src/components/SwiperSlider/Swiper";
 import Testimonials from "src/components/Testimonials/Testimonials";
+import TabPreview from "../Tab/TabPreview/TabPreview";
+import TabContainer from "../Tab/TabContainer/TabContainer";
 export const Main = () => {
   const ValuesContainer = () => {
     return (
@@ -74,90 +76,45 @@ export const Main = () => {
       </div>
     );
   };
+
   const items: TabsProps["items"] = [
     {
       key: "1",
       label: `Evolution of outdated logistics networks`,
+      children: (
+        <TabContainer
+          heading="You need to develop more partnerships, and are tired of the
+      outdated logistics network you see in the market?"
+          t1="We are not only a list of freight forwarders"
+          c1="Our search algorithm ranks the best companies first, so you can
+      be the first in your country and get quotations from all our
+      members."
+          t2="Transparent validation system"
+          c2="Have you ever wondered how your current logistics network
+          validates their new members? In Parnity you can check all
+          documents on the forwarder profile."
+          t3="Technological platform"
+          c3="A platform built with the most modern technological concepts so you 
+          can spend less time finding the best partner for your forwarder."
+          Image={Image2}
+        />
+      ),
     },
     {
       key: "2",
       label: `Find and be found by forwarders, but faster!`,
       children: (
-        <div
-          style={{
-            width: "85vw",
-            height: "75vh",
-            display: "flex",
-            flex: 1,
-          }}
-        >
-          <div style={{ flex: 2 }}>
-            <div
-              style={{
-                marginBlock: 20,
-                marginInline: 20,
-                width: 450,
-                height: 90,
-                fontSize: 20,
-              }}
-            >
-              You need to develop more partnerships, and are tired of the
-              outdated logistics network you see in the market?
-            </div>
-            <div
-              style={{
-                marginBlock: 10,
-                marginInline: 20,
-                width: 450,
-                height: 140,
-              }}
-            >
-              <div style={{ fontSize: 18, fontWeight: "bold" }}>
-                We are not only a list of freight forwarders
-              </div>
-              <div style={{ fontSize: 17 }}>
-                Our search algorithm ranks the best companies first, so you can
-                be the first in your country and get quotations from all our
-                members.
-              </div>
-            </div>
-            <div
-              style={{
-                marginBlock: 10,
-                marginInline: 20,
-                width: 450,
-                height: 140,
-              }}
-            >
-              <div style={{ fontSize: 18, fontWeight: "bold" }}>
-                Transparent validation system
-              </div>
-              <div style={{ fontSize: 17 }}>
-                Have you ever wondered how your current logistics network
-                validates their new members? In Parnity you can check all
-                documents on the forwarder profile.
-              </div>
-            </div>
-            <div
-              style={{
-                marginBlock: 10,
-                marginInline: 20,
-                width: 450,
-                height: 140,
-              }}
-            >
-              <div style={{ fontSize: 18, fontWeight: "bold" }}>
-                Technological platform
-              </div>
-              <div style={{ fontSize: 17 }}>
-                A platform built with the most modern technological concepts so
-                you can spend less time finding the best partner for your
-                forwarder.
-              </div>
-            </div>
-          </div>
-          <div style={{ flex: 3 }}></div>
-        </div>
+        <TabContainer
+          heading="Freight forwarders have an hectic schedule, the digital world came to help you to spend
+          less time on simple tasks."
+          t1="Human close support"
+          c1="Get access to a key account manager to ask for help indications, or whatever you need to make 
+          better partnerships."
+          t2="Ultra simple system"
+          c2="find your next partner in less than 3 clicks, find complete information about the partners,
+          and get faster quotations."
+          Image={Image2}
+        />
       ),
     },
     {

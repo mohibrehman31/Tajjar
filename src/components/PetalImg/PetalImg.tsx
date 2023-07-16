@@ -1,5 +1,5 @@
-import React from 'react';
-import './PetalImg.scss';
+import React from "react";
+import "./PetalImg.scss";
 
 const PetalImg = ({ src, className }) => (
   <div className={`petal-img ${className}`}>

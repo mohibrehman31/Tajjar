@@ -393,7 +393,7 @@ export default function SubmitPosting() {
                     >
                       {Object.entries(
                         hazardous[userSelection["hazardous_classification"]]
-                      ).map((type) => (
+                      ).map((type, index) => (
                         <MenuItem value={type[1]}>{type[1]}</MenuItem>
                       ))}
                     </Select>
@@ -401,6 +401,89 @@ export default function SubmitPosting() {
                 )}
               </>
             )}
+          </div>
+
+          <div
+            className="step2"
+            style={{ display: step === 2 ? "flex" : "none" }}
+          >
+            <FormControl sx={{ width: "170px" }} size="small">
+              <InputLabel id="demo-simple-select-label">Freight</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={userSelection["freight"]}
+                label="Freight"
+                onChange={(e) => handleChange("freight", e.target.value)}
+              >
+                <MenuItem value={"Yes"}>Yes</MenuItem>
+                <MenuItem value={"No"}>No</MenuItem>
+              </Select>
+            </FormControl>
+            <FormControl sx={{ width: "170px" }} size="small">
+              <InputLabel id="demo-simple-select-label">Customs</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={userSelection["customs"]}
+                label="Customs"
+                onChange={(e) => handleChange("customs", e.target.value)}
+              >
+                <MenuItem value={"Yes"}>Yes</MenuItem>
+                <MenuItem value={"No"}>No</MenuItem>
+              </Select>
+            </FormControl>
+            <FormControl sx={{ width: "170px" }} size="small">
+              <InputLabel id="demo-simple-select-label">
+                Transportation
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={userSelection["transportation"]}
+                label="Transportation"
+                onChange={(e) => handleChange("transportation", e.target.value)}
+              >
+                <MenuItem value={"Yes"}>Yes</MenuItem>
+                <MenuItem value={"No"}>No</MenuItem>
+              </Select>
+            </FormControl>
+            <FormControl sx={{ width: "170px" }} size="small">
+              <InputLabel id="demo-simple-select-label">Insurance</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={userSelection["insurance"]}
+                label="Insurance"
+                onChange={(e) => handleChange("insurance", e.target.value)}
+              >
+                <MenuItem value={"Yes"}>Yes</MenuItem>
+                <MenuItem value={"No"}>No</MenuItem>
+              </Select>
+            </FormControl>
+            <FormControl sx={{ width: "170px" }} size="small">
+              <InputLabel id="demo-simple-select-label">Warehousing</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={userSelection["warehousing"]}
+                label="Warehousing"
+                onChange={(e) => handleChange("warehousing", e.target.value)}
+              >
+                <MenuItem value={"Yes"}>Yes</MenuItem>
+                <MenuItem value={"No"}>No</MenuItem>
+              </Select>
+            </FormControl>
+            <TextField
+              id="filled-basic"
+              label="Description"
+              variant="outlined"
+              sx={{ width: "300px" }}
+              size="small"
+              type="number"
+              value={userSelection["description"]}
+              onChange={(e) => handleChange("description", e.target.value)}
+            />
           </div>
         </div>
 

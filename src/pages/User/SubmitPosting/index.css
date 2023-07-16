@@ -33,6 +33,13 @@
   justify-content: center;
   gap: 2vh;
 }
+.step2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+  }
 .css-1vyamtt-MuiStepLabel-labelContainer {
   color: #bcc2fc !important;
 }

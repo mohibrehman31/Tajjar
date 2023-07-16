@@ -19,8 +19,6 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
-import Button from "@mui/material/Button";
-
 export default function Payments() {
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [page, setPage] = useState(0);
@@ -67,30 +65,26 @@ export default function Payments() {
     <div className="payments-page">
       <div className="payments-body">
         <div className="payments-options-container">
+          <FormControl sx={{ width: "150px", marginRight: 2 }} size="small">
+            <InputLabel id="demo-select-small-label">Payment Filter</InputLabel>
+            <Select
+              labelId="demo-select-small-label"
+              id="demo-select-small"
+              value={paymentFilter}
+              label="Payment Filter"
+              onChange={(e) => setPaymentFilter(e.target.value)}
+            >
+              <MenuItem value="None">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value="Pending">Yes</MenuItem>
+              <MenuItem value="Bidden">No</MenuItem>
+            </Select>
+          </FormControl>
 
-            <FormControl sx={{ width: "150px", marginRight: 2 }} size="small">
-              <InputLabel id="demo-select-small-label">
-                Payment Filter
-              </InputLabel>
-              <Select
-                labelId="demo-select-small-label"
-                id="demo-select-small"
-                value={paymentFilter}
-                label="Payment Filter"
-                onChange={(e) => setPaymentFilter(e.target.value)}
-              >
-                <MenuItem value="None">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem value="Pending">Yes</MenuItem>
-                <MenuItem value="Bidden">No</MenuItem>
-              </Select>
-            </FormControl>
-
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <DatePicker label="Date filter" sx={{ marginLeft: 2 }} />
-            </LocalizationProvider>
-
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <DatePicker label="Date filter" sx={{ marginLeft: 2 }} />
+          </LocalizationProvider>
         </div>
 
         <Paper sx={{ width: "80%", overflow: "hidden" }}>

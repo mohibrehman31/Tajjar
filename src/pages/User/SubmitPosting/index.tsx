@@ -367,7 +367,7 @@ export default function SubmitPosting() {
                       handleChange("hazardous_classification", e.target.value)
                     }
                   >
-                    {Object.keys(hazardous).map((type, index) => (
+                    {Object.keys(hazardous).map((type) => (
                       <MenuItem value={type}>{type}</MenuItem>
                     ))}
                   </Select>
@@ -380,13 +380,20 @@ export default function SubmitPosting() {
                     <Select
                       labelId="demo-simple-select-label"
                       id="demo-simple-select"
-                      value={userSelection[userSelection["hazardous_classification"]]}
+                      value={
+                        userSelection[userSelection["hazardous_classification"]]
+                      }
                       label={userSelection["hazardous_classification"]}
                       onChange={(e) =>
-                        handleChange(userSelection["hazardous_classification"], e.target.value)
+                        handleChange(
+                          userSelection["hazardous_classification"],
+                          e.target.value
+                        )
                       }
                     >
-                      {Object.entries(hazardous[userSelection["hazardous_classification"]]).map((type, index) => (
+                      {Object.entries(
+                        hazardous[userSelection["hazardous_classification"]]
+                      ).map((type) => (
                         <MenuItem value={type[1]}>{type[1]}</MenuItem>
                       ))}
                     </Select>

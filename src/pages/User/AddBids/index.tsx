@@ -10,21 +10,13 @@ import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
-import Button from "@mui/material/Button";
-
 export default function AddBids() {
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [page, setPage] = useState(0);
-
 
   const columns = [
     "Posting Id",
@@ -65,11 +57,10 @@ export default function AddBids() {
   return (
     <div className="add-bids-page">
       <div className="add-bids-body">
-
         <div className="add-bids-options-container">
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <DatePicker label="Date filter"/>
-            </LocalizationProvider>
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <DatePicker label="Date filter" />
+          </LocalizationProvider>
         </div>
 
         <Paper sx={{ width: "80%", overflow: "hidden" }}>

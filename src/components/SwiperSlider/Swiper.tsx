@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "./Swiper.scss";
 import { Autoplay } from "swiper/modules";
-import ValueCard from "src/components/ValueCard/valueCard";
+import ValueCard from "src/components/ValueCard/ValueCard";
 import CustomerSatisfactionImage from "src/assets/Images/Satisfaction.svg";
 import EfficiencyImage from "src/assets/Images/Efficiency.svg";
 import ImprovementImage from "src/assets/Images/Improvement.svg";

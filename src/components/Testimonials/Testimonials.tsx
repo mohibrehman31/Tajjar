@@ -1,7 +1,14 @@
-import React from 'react';
-import './Testimonials.scss';
+import "./Testimonials.scss";
 
-const Testimonials = ({ heading, subheading, imageSrc, name, position, review, buttonText }) => {
+const Testimonials = ({
+  heading,
+  subheading,
+  imageSrc,
+  name,
+  position,
+  review,
+  buttonText,
+}: any) => {
   return (
     <div className="testimonials">
       <div className="testimonials-left">
@@ -22,9 +29,7 @@ const Testimonials = ({ heading, subheading, imageSrc, name, position, review, b
             <div className="position">{position}</div>
           </div>
         </div>
-        <div className="review">
-          {review}
-        </div>
+        <div className="review">{review}</div>
         <button className="custom-button">{buttonText}</button>
       </div>
     </div>

@@ -1,4 +1,3 @@
-import React from "react";
 import { Layout, Space } from "antd";
 import { Header } from "src/components/Header/Header";
 import { Footer } from "src/components/Footer/Footer";

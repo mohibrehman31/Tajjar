@@ -158,25 +158,27 @@ export const Main = () => {
           </div>
         </div>
         <div className="about">
-          <div className="heading">About Tajjar</div>
-          <span className="details">
-            Established in 1966, Tajjar-ul-Bahr (Private) Limited is a leading
-            logistics and freight forwarding company in Pakistan. With a
-            headquarters in Karachi and branch offices in five major cities
-            across the country, we boast a strong global network to provide
-            comprehensive logistics services and cutting-edge solutions tailored
-            to our customers' needs. At Tajjar-ul-Bahr, operational excellence
-            is our foundation, as we continuously monitor performance and
-            service delivery through well-documented standard operating
-            procedures (SOPs). Our commitment to quality is reflected in our ISO
-            9001:2015 certification and various esteemed national and
-            international accreditations. Our dedicated and experienced teams
-            are trained to deliver tailor-made logistics solutions, going above
-            and beyond to exceed expectations. With in-depth product knowledge
-            and extensive market experience, we strive to provide cost-effective
-            freight solutions while maintaining the highest standards of service
-            and quality.
-          </span>
+          <div className="about-container">
+            <div className="heading">About Tajjar</div>
+            <span className="details">
+              Established in 1966, Tajjar-ul-Bahr (Private) Limited is a leading
+              logistics and freight forwarding company in Pakistan. With a
+              headquarters in Karachi and branch offices in five major cities
+              across the country, we boast a strong global network to provide
+              comprehensive logistics services and cutting-edge solutions
+              tailored to our customers' needs. At Tajjar-ul-Bahr, operational
+              excellence is our foundation, as we continuously monitor
+              performance and service delivery through well-documented standard
+              operating procedures (SOPs). Our commitment to quality is
+              reflected in our ISO 9001:2015 certification and various esteemed
+              national and international accreditations. Our dedicated and
+              experienced teams are trained to deliver tailor-made logistics
+              solutions, going above and beyond to exceed expectations. With
+              in-depth product knowledge and extensive market experience, we
+              strive to provide cost-effective freight solutions while
+              maintaining the highest standards of service and quality.
+            </span>
+          </div>
         </div>
       </div>
       <ValuesContainer />

@@ -1,4 +1,3 @@
-import React from "react";
 import "./Footer.scss";
 import { FooterLogo } from "src/assets/Images";
 export const Footer = () => {
@@ -31,25 +30,20 @@ export const Footer = () => {
             </div>
             <div className="detail parnity-container">
               <div className="content">
-                <div className="header">Parnity</div>
+                <div className="header">Support</div>
                 <div className="inner-content">
-                  <div className="home">Home</div>
-                  <div className="about-us">About Us</div>
-                  <div className="shipmgmt">Ship Management</div>
-                  <div className="agency">Ship Agency</div>
-                  <div className="portal">Portal</div>
+                  <div className="home">Help Center</div>
+                  <div className="about-us">Blog</div>
                 </div>
               </div>
             </div>
             <div className="detail parnity-container">
               <div className="content">
-                <div className="header">Parnity</div>
+                <div className="header">Follow us</div>
                 <div className="inner-content">
-                  <div className="home">Home</div>
-                  <div className="about-us">About Us</div>
-                  <div className="shipmgmt">Ship Management</div>
-                  <div className="agency">Ship Agency</div>
-                  <div className="portal">Portal</div>
+                  <div className="home">Facebook</div>
+                  <div className="about-us">Instagram</div>
+                  <div className="shipmgmt">Linkedin</div>
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 @import "src/sass/style.scss";
 .root-container {
-  height: 200vh;
+  height: 190vh;
   width: 100%;
   margin-top: 50px;
   display: block;
@@ -68,16 +68,20 @@
     }
   }
   .about {
-    display: block;
-    margin-left: 20%;
-    height: 200px;
-    width: 1000px;
-    margin-top: 200px;
-    text-align: center;
+    display: flex;
+    width: 100%;
     justify-content: center;
-    align-items: center;
-    font-family: Poppins;
-    color: $button-text;
+    .about-container {
+      height: 200px;
+      width: 1000px;
+      margin-top: 100px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      font-family: Poppins;
+      color: $button-text;
+    }
+
     .heading {
       margin-block: 20px;
       font-weight: $semibold-weight;

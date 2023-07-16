@@ -1,5 +1,5 @@
 import ReactApexChart from "react-apexcharts";
-var randomizeArray = function (arg) {
+var randomizeArray = function (arg: any) {
   var array = arg.slice();
   var currentIndex = array.length,
     temporaryValue,

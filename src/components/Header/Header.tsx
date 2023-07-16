@@ -1,8 +1,9 @@
-import React from "react";
 import "./Header.scss";
 import { Logo } from "src/assets/Images";
-import { RightArrow } from "../../assets/Icons";
+import { RightArrow } from "src/assets/Icons";
+import { useNavigate } from "react-router-dom";
 export const Header = () => {
+  const navigate = useNavigate();
   return (
     <div className="header-container">
       <div className="inner-container">
@@ -15,7 +16,10 @@ export const Header = () => {
           <div className="section3">Ship Management</div>
           <div className="section4">Ship Agency</div>
         </div>
-        <div className="portal-container">
+        <div
+          className="portal-container"
+          onClick={() => navigate("/User/Dashboard")}
+        >
           Portal
           <img src={RightArrow} style={{ marginLeft: 10 }} />
         </div>

@@ -1,6 +1,6 @@
 @import "src/sass/style.scss";
 .root-container {
-  height: 250vh;
+  height: 200vh;
   width: 100%;
   margin-top: 50px;
   display: block;
@@ -148,6 +148,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 110px;
 
   .heading-container {
     height: 45px;
@@ -193,6 +194,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 110px;
 }
 
 .heading-container {
@@ -202,17 +204,24 @@
 
   .heading-content {
     color: #242a43;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: bold;
     font-size: 38px;
   }
 }
 
 .partners-container {
-  background-image: url('../../assets/Images/Partners.svg');
-  background-size: cover;
-  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 100px;
+  height: 200px;
+  .content {
+    background-image: url("../../assets/Images/Partners.svg");
+    background-size: contain;
+    background-position: center;
+    height: 180px;
+    width: 70%;
+    background-repeat: no-repeat;
+  }
 }

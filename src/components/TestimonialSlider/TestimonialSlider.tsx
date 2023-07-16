@@ -1,11 +1,10 @@
-import React, { useRef, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import './TestimonialSlider.scss';
-import {Pagination} from 'swiper/modules';
-import img1 from '../../assets/Images/img1.jpg'
-import Testimonials from '../Testimonials/Testimonials';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "./TestimonialSlider.scss";
+import { Pagination } from "swiper/modules";
+import img1 from "../../assets/Images/img1.jpg";
+import Testimonials from "../Testimonials/Testimonials";
 
 export default function TestimonialSlider() {
   return (
@@ -21,7 +20,7 @@ export default function TestimonialSlider() {
         className="mySwiper"
       >
         <SwiperSlide>
-        <Testimonials
+          <Testimonials
             heading="Increase Business"
             subheading="Increase Your Forwarder Business"
             imageSrc={img1}
@@ -32,7 +31,7 @@ export default function TestimonialSlider() {
           />
         </SwiperSlide>
         <SwiperSlide>
-        <Testimonials
+          <Testimonials
             heading="Increase Business"
             subheading="Increase Your Forwarder Business"
             imageSrc={img1}
@@ -43,7 +42,7 @@ export default function TestimonialSlider() {
           />
         </SwiperSlide>
         <SwiperSlide>
-        <Testimonials
+          <Testimonials
             heading="Increase Business"
             subheading="Increase Your Forwarder Business"
             imageSrc={img1}

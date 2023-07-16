@@ -185,7 +185,9 @@ export const Main = () => {
         <Tabs defaultActiveKey="1" items={items} />
       </div>
       <TestimonialsContainer />
-      <div className="partners-container"></div>
+      <div className="partners-container">
+        <div className="content"></div>
+      </div>
     </>
   );
 };

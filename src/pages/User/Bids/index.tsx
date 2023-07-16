@@ -65,7 +65,7 @@ export default function Bids() {
   const handleChangeRowsPerPage = (event: any) => {
     const selectedValue = Number(event.target.value);
     console.log("Selected value:", selectedValue);
-    setRowsPerPage(selectedValue)
+    setRowsPerPage(selectedValue);
     setPage(0);
   };
 
@@ -166,7 +166,6 @@ export default function Bids() {
                 {rows
                   .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                   .map((row: any, rowIndex: number) => {
-                    
                     return (
                       <TableRow
                         hover
@@ -175,9 +174,9 @@ export default function Bids() {
                         key={rowIndex}
                       >
                         {Object.keys(row).map((column, colIndex: number) => {
-
-                          // const value = row[colIndex];
-                          return <TableCell key={colIndex}>{row[column]}</TableCell>;
+                          return (
+                            <TableCell key={colIndex}>{row[column]}</TableCell>
+                          );
                         })}
                       </TableRow>
                     );

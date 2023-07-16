@@ -18,12 +18,10 @@ import Select from "@mui/material/Select";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { useNavigate } from "react-router-dom";
-import lottie from "lottie-web";
-import { defineElement } from "lord-icon-element";
+import { useNavigate } from 'react-router-dom'
+import Button from "@mui/material/Button";
 
-defineElement(lottie.loadAnimation);
-export default function Bids() {
+export default function Postings() {
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [page, setPage] = useState(0);
 
@@ -31,13 +29,10 @@ export default function Bids() {
   const [bidTypeFilter, setBidtypeFilter] = useState<string>("");
 
   const navigate = useNavigate();
-
   const columns = [
-    "Posting Id",
-    "User Name",
-    "Cost",
-    "Bidding Status",
-    "Bid Type",
+    "Posting Type",
+    "Commodity",
+    "Posting Status",
     "Added Dete",
     "Details",
   ];
@@ -69,10 +64,10 @@ export default function Bids() {
   };
 
   return (
-    <div className="bids-page">
-      <div className="bids-body">
-        <div className="bids-options-container">
-          <div className="filter-container">
+    <div className="postings-page">
+      <div className="postings-body">
+        <div className="postings-options-container">
+          <div className="postings-filter-container">
             <FormControl sx={{ width: "140px", marginRight: 2 }} size="small">
               <InputLabel id="demo-select-small-label">
                 Status Filter
@@ -120,19 +115,8 @@ export default function Bids() {
             </LocalizationProvider>
           </div>
 
-          <div
-            style={{ cursor: "pointer" }}
-            onClick={() =>
-              setTimeout(() => {
-                navigate("/User/AddBids");
-              }, 1500)
-            }
-          >
-            <lord-icon
-              src="https://cdn.lordicon.com/mecwbjnp.json"
-              trigger="click"
-              colors="primary:#d1f3fa,secondary:#80eccf"
-            />
+          <div>
+            <Button variant="outlined" onClick={() => navigate("/User/SubmitPosting")}>Add Posting</Button>
           </div>
         </div>
 

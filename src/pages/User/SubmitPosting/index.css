@@ -1,66 +1,65 @@
-
-.submit-posting-page{
-
+.submit-posting-page {
 }
 
-.submit-posting-body{
-    /* margin-top: 11vh; */
-    margin: 5vh 5vw 0vh 5vw;
-    font-family: "Roboto";
-    font-weight: 800;
-    letter-spacing: 0.02em;
-    font-size: 30px;
+.submit-posting-body {
+  /* margin-top: 11vh; */
+  margin: 5vh 5vw 0vh 5vw;
+  font-family: "Roboto";
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  font-size: 30px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10vh 0px;
-    background-color: #bcc2fc;
-    border-radius: 5vw 10vw;
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh 0px;
+  background-color: #bcc2fc;
+  border-radius: 5vw 10vw;
 }
 
-.submit-posting-form{
-    width: 50%;
-    background-color: white;
-    border-radius: 40px;
-    margin-top: 2%;
-    padding: 2%;
-    display: grid;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2vh;
-    
+.submit-posting-form {
+  width: 50%;
+  background-color: white;
+  border-radius: 40px;
+  margin-top: 2%;
+  padding: 2%;
 }
-.css-1vyamtt-MuiStepLabel-labelContainer{
-    color: #bcc2fc !important;
+
+.step1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+}
+.css-1vyamtt-MuiStepLabel-labelContainer {
+  color: #bcc2fc !important;
 }
 .css-1hv8oq8-MuiStepLabel-label.Mui-completed {
-    color: #bcc2fc !important;
+  color: #bcc2fc !important;
 }
-.css-1hv8oq8-MuiStepLabel-label.Mui-active{
-    color: white !important;
-}
-
-.css-z7uhs0-MuiStepConnector-line{
-    border-color: black !important;
+.css-1hv8oq8-MuiStepLabel-label.Mui-active {
+  color: white !important;
 }
 
-.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active{
-    color: white !important;
+.css-z7uhs0-MuiStepConnector-line {
+  border-color: black !important;
 }
 
-.css-117w1su-MuiStepIcon-text{
-    fill: black !important;
-    font-size: 0.8rem !important;
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
+  color: white !important;
+}
+
+.css-117w1su-MuiStepIcon-text {
+  fill: black !important;
+  font-size: 0.8rem !important;
 }
 
 .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
-    color: white !important;
+  color: white !important;
 }
 
-.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root{
-    color: #a8befa !important;
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root {
+  color: #a8befa !important;
 }

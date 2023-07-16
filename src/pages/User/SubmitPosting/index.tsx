@@ -10,42 +10,12 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import TextField from "@mui/material/TextField";
+import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 const steps = ["Basic Details", "Motive", "End"];
-
-const postingType: {
-  [key: string]: {
-    [key: string]: {
-      type: string;
-      options?: string[];
-      extension?: {
-        [key: string]: {
-          type: string;
-          options?: string[];
-        };
-      };
-    };
-  };
-} = {
-  General: {
-    Pickup: {
-      type: "input",
-    },
-    Dropoff: {
-      type: "input",
-    },
-    "Load Type": {
-      type: "select",
-      options: ["Containerized", "Break Bulk", "Bulk"],
-      extension: {
-        Containerized: {
-          type: "select",
-          options: ["FCL", "LCL"],
-        },
-      },
-    },
-  },
-};
 
 interface userSelectionType {
   [key: string]: string;
@@ -65,7 +35,6 @@ export default function SubmitPosting() {
       [field]: value,
     };
     setSelection(newChange);
-    // console.log(postingType.General["Load Type"].extension?.["Containerized"].options)
   };
 
   return (
@@ -97,7 +66,7 @@ export default function SubmitPosting() {
 
         <div className="submit-posting-form">
           <div className="step1">
-            <FormControl sx={{ width: "150px" }} size="small">
+            <FormControl sx={{ width: "170px" }} size="small">
               <InputLabel id="demo-simple-select-label">
                 Posting Type
               </InputLabel>
@@ -113,16 +82,205 @@ export default function SubmitPosting() {
                 <MenuItem value={"Export"}>Export</MenuItem>
               </Select>
             </FormControl>
-            {userSelection["posting_type"] === "General" && (
-              <TextField
-                id="filled-basic"
-                label={userSelection["pickup"]}
-                variant="filled"
-                sx={{ width: "150px" }}
-                size="small"
-                value={userSelection["pickup"]}
-                onChange={(e) => handleChange("pickup", e.target.value)}
-              />
+            {userSelection["posting_type"] === "General" ? (
+              <>
+                <TextField
+                  id="filled-basic"
+                  label="Pickup"
+                  variant="filled"
+                  sx={{ width: "170px" }}
+                  size="small"
+                  value={userSelection["pickup"]}
+                  onChange={(e) => handleChange("pickup", e.target.value)}
+                />
+                <TextField
+                  id="filled-basic"
+                  label="Dropoff"
+                  variant="filled"
+                  sx={{ width: "170px" }}
+                  size="small"
+                  value={userSelection["dropoff"]}
+                  onChange={(e) => handleChange("dropoff", e.target.value)}
+                />
+                <FormControl sx={{ width: "170px" }} size="small">
+                  <InputLabel id="demo-simple-select-label">
+                    Load Type
+                  </InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={userSelection["load_type"]}
+                    label="Load Type"
+                    onChange={(e) => handleChange("load_type", e.target.value)}
+                  >
+                    <MenuItem value={"Containerized"}>Containerized</MenuItem>
+                    <MenuItem value={"Break_Bulk"}>Break Bulk</MenuItem>
+                    <MenuItem value={"Bulk"}>Bulk</MenuItem>
+                  </Select>
+                </FormControl>
+                {userSelection["load_type"] && (
+                  <>
+                    {userSelection["load_type"] === "Containerized" && (
+                      <FormControl sx={{ width: "170px" }} size="small">
+                        <InputLabel id="demo-simple-select-label">
+                          Container Type
+                        </InputLabel>
+                        <Select
+                          labelId="demo-simple-select-label"
+                          id="demo-simple-select"
+                          value={userSelection["container_type"]}
+                          label="Container Type"
+                          onChange={(e) =>
+                            handleChange("container_type", e.target.value)
+                          }
+                        >
+                          <MenuItem value={"FCL"}>FCL</MenuItem>
+                          <MenuItem value={"LCL"}>LCL</MenuItem>
+                        </Select>
+                      </FormControl>
+                    )}
+                    <TextField
+                      id="filled-basic"
+                      label={
+                        userSelection["load_type"] === "Containerized" && userSelection["container_type"] === "FCL"
+                          ? "Trucks"
+                          :  userSelection["load_type"] === "Containerized" && userSelection["container_type"] === "LCL"
+                          ? "Pallets"
+                          : "Trucks"
+                      }
+                      variant="outlined"
+                      sx={{ width: "170px" }}
+                      size="small"
+                      type="number"
+                      inputProps={{ min: 1 }}
+                      value={userSelection["trucks_required"]}
+                      onChange={(e) =>
+                        handleChange("trucks_required", e.target.value)
+                      }
+                    />
+                  </>
+                )}
+              </>
+            ) : (
+              (userSelection["posting_type"] === "Import" ||
+                userSelection["posting_type"] === "Export") && (
+                <>
+                  <FormControl sx={{ width: "170px" }} size="small">
+                    <InputLabel id="demo-simple-select-label">
+                      Loading Port
+                    </InputLabel>
+                    <Select
+                      labelId="demo-simple-select-label"
+                      id="demo-simple-select"
+                      value={userSelection["loading_port"]}
+                      label="Loading Port"
+                      onChange={(e) =>
+                        handleChange("loading_port", e.target.value)
+                      }
+                    >
+                      <MenuItem value={"Bin Qasim"}>Bin Qasim</MenuItem>
+                      <MenuItem value={"Gawadar"}>Gawadar</MenuItem>
+                    </Select>
+                  </FormControl>
+                  <FormControl sx={{ width: "170px" }} size="small">
+                    <InputLabel id="demo-simple-select-label">
+                      Discharge Port
+                    </InputLabel>
+                    <Select
+                      labelId="demo-simple-select-label"
+                      id="demo-simple-select"
+                      value={userSelection["discharge_port"]}
+                      label="Discharge Port"
+                      onChange={(e) =>
+                        handleChange("discharge_port", e.target.value)
+                      }
+                    >
+                      <MenuItem value={"Bin Qasim"}>Bin Qasim</MenuItem>
+                      <MenuItem value={"Gawadar"}>Gawadar</MenuItem>
+                    </Select>
+                  </FormControl>
+
+                  <>
+                    {userSelection["posting_type"] === "Export" ? (
+                      <>
+                        <TextField
+                          id="filled-basic"
+                          label="Shipment Name"
+                          variant="outlined"
+                          sx={{ width: "170px" }}
+                          size="small"
+                          value={userSelection["shipment_name"]}
+                          onChange={(e) =>
+                            handleChange("shipment_name", e.target.value)
+                          }
+                        />
+                        <LocalizationProvider dateAdapter={AdapterDayjs}>
+                          <DatePicker
+                            label="Loading Date"
+                            sx={{ width: "170px" }}
+                            onChange={(e: any) =>
+                              handleChange(
+                                "loading_date",
+                                e["$D"] +
+                                  "-" +
+                                  Number(e["$M"] + 1) +
+                                  "-" +
+                                  e["$y"]
+                              )
+                            }
+                          />
+                        </LocalizationProvider>
+                        <TextField
+                          id="filled-basic"
+                          label="Price Value"
+                          variant="outlined"
+                          sx={{ width: "170px" }}
+                          size="small"
+                          type="number"
+                          value={userSelection["price_value"]}
+                          onChange={(e) =>
+                            (typeof Number(e.target.value) === "number" && Number(e.target.value) > 0) &&
+                            handleChange("price_value", e.target.value)
+                          }
+                        />
+                        <TextField
+                          id="filled-basic"
+                          label="CIF Value"
+                          variant="outlined"
+                          sx={{ width: "170px" }}
+                          size="small"
+                          type="number"
+                          value={userSelection["cif_value"]}
+                          onChange={(e) =>
+                            (typeof Number(e.target.value) === "number" && Number(e.target.value) > 0) &&
+                            handleChange("cif_value", e.target.value)
+                          }
+                        />
+                      </>
+                    ) : (
+                      <TextField
+                        id="filled-basic"
+                        label={
+                          userSelection["container_type"] === "FCL"
+                            ? "Trucks"
+                            : userSelection["container_type"] === "LCL"
+                            ? "Pallets"
+                            : "Trucks"
+                        }
+                        variant="outlined"
+                        sx={{ width: "170px" }}
+                        size="small"
+                        type="number"
+                        inputProps={{ min: 1 }}
+                        value={userSelection["trucks_required"]}
+                        onChange={(e) =>
+                          handleChange("trucks_required", e.target.value)
+                        }
+                      />
+                    )}
+                  </>
+                </>
+              )
             )}
           </div>
         </div>

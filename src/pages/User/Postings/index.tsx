@@ -33,28 +33,26 @@ export default function Postings() {
     "Posting Type",
     "Commodity",
     "Posting Status",
-    "Added Dete",
+    "Added Date",
     "Details",
   ];
 
   function createData(
-    postingId: string,
-    userName: string,
-    cost: string,
-    status: string,
-    type: string,
-    date: string,
-    details: string
+    postingType: string,
+    commodity: string,
+    postingStatus: string,
+    addedDate: string,
+    details: string,
   ) {
-    return { postingId, userName, cost, status, type, date, details };
+    return { postingType, commodity, postingStatus, addedDate, details };
   }
 
   const rows = [
-    createData("101", "Sammam", "600", "accepted", "xyz", "10/12/23", "none"),
-    createData("101", "Sammam", "600", "accepted", "xyz", "10/12/23", "none"),
-    createData("101", "Sammam", "600", "accepted", "xyz", "10/12/23", "none"),
-    createData("101", "Sammam", "600", "accepted", "xyz", "10/12/23", "none"),
-    createData("101", "Sammam", "600", "accepted", "xyz", "10/12/23", "none"),
+    createData("101", "600", "accepted", "10/12/23", "none"),
+    createData("101", "600", "accepted", "10/12/23", "none"),
+    createData("101", "600", "accepted", "10/12/23", "none"),
+    createData("101", "600", "accepted", "10/12/23", "none"),
+    createData("101", "600", "accepted", "10/12/23", "none"),
   ];
 
   const handleChangeRowsPerPage = (event: any) => {
@@ -157,7 +155,7 @@ export default function Postings() {
                         key={rowIndex}
                       >
                         {columns.map((column, colIndex: number) => {
-                          const value = row[column];
+                          // const value = row[column];
                           return <TableCell key={colIndex}>{value}</TableCell>;
                         })}
                       </TableRow>

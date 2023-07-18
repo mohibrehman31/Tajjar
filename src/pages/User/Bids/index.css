@@ -61,3 +61,10 @@
     padding: 8px;
   }
 }
+.MuiTablePagination-selectLabel{
+  margin-bottom: 0 !important;
+}
+
+.MuiTablePagination-displayedRows{
+  margin-bottom: 0 !important;
+}

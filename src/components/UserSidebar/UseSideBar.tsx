@@ -8,6 +8,7 @@ import {
   addBid,
   payment,
   logout,
+  sidebar
 } from "src/assets/Images/";
 import { useNavigate } from "react-router-dom";
 

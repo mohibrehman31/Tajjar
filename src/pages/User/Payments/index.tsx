@@ -36,23 +36,23 @@ export default function Payments() {
   ];
 
   function createData(
-    postingId: string,
     userName: string,
-    cost: string,
-    status: string,
-    type: string,
+    bank: string,
+    branch: string,
+    amount: string,
+    verified: string,
     date: string,
     details: string
   ) {
-    return { postingId, userName, cost, status, type, date, details };
+    return { userName, bank, branch, amount, verified, date, details };
   }
 
   const rows = [
-    createData("101", "Sammam", "600", "accepted", "xyz", "10/12/23", "none"),
-    createData("101", "Sammam", "600", "accepted", "xyz", "10/12/23", "none"),
-    createData("101", "Sammam", "600", "accepted", "xyz", "10/12/23", "none"),
-    createData("101", "Sammam", "600", "accepted", "xyz", "10/12/23", "none"),
-    createData("101", "Sammam", "600", "accepted", "xyz", "10/12/23", "none"),
+    createData("Sammam101", "bank1", "600", "accepted", "xyz", "10/12/23", "none"),
+    createData("Sammam101", "bank1", "600", "accepted", "xyz", "10/12/23", "none"),
+    createData("Sammam101", "bank1", "600", "accepted", "xyz", "10/12/23", "none"),
+    createData("Sammam101", "bank1", "600", "accepted", "xyz", "10/12/23", "none"),
+    createData("Sammam101", "bank1", "600", "accepted", "xyz", "10/12/23", "none"),
   ];
 
   const handleChangeRowsPerPage = (event: any) => {
@@ -115,7 +115,7 @@ export default function Payments() {
               <TableBody>
                 {rows
                   .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                  .map((row, rowIndex) => {
+                  .map((row: any, rowIndex: number) => {
                     return (
                       <TableRow
                         hover
@@ -123,9 +123,10 @@ export default function Payments() {
                         tabIndex={-1}
                         key={rowIndex}
                       >
-                        {columns.map((column, colIndex: number) => {
-                          const value = row[column];
-                          return <TableCell key={colIndex}>{value}</TableCell>;
+                        {Object.keys(row).map((column, colIndex: number) => {
+                          return (
+                            <TableCell key={colIndex}>{row[column]}</TableCell>
+                          );
                         })}
                       </TableRow>
                     );

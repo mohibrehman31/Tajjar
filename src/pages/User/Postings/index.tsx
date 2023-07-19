@@ -146,7 +146,7 @@ export default function Postings() {
               <TableBody>
                 {rows
                   .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                  .map((row, rowIndex) => {
+                  .map((row: any, rowIndex: number) => {
                     return (
                       <TableRow
                         hover
@@ -154,9 +154,10 @@ export default function Postings() {
                         tabIndex={-1}
                         key={rowIndex}
                       >
-                        {columns.map((column, colIndex: number) => {
-                          // const value = row[column];
-                          return <TableCell key={colIndex}>{value}</TableCell>;
+                        {Object.keys(row).map((column, colIndex: number) => {
+                          return (
+                            <TableCell key={colIndex}>{row[column]}</TableCell>
+                          );
                         })}
                       </TableRow>
                     );

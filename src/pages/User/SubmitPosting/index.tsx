@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
-import { Button } from "@mui/joy";
+import Button from "@mui/material/Button";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -15,6 +15,8 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import hazardous from "./hazardous";
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 const steps = ["Basic Details", "Motive", "End"];
 
@@ -487,12 +489,28 @@ export default function SubmitPosting() {
           </div>
         </div>
 
-        <Button
-          variant="outlined"
-          onClick={() => setStep((prevState) => prevState + 1)}
-        >
-          step
-        </Button>
+        <div className="add-posting-body-footer">
+          <Button
+            variant="contained"
+            startIcon={<ArrowBackIosNewIcon />}
+            sx={{ backgroundColor: "#2bd9a2", color: "black"}}
+            disabled={step === 0}
+            onClick={() => setStep(step - 1)}
+            size='medium'
+          >
+            Back
+          </Button>
+
+          <Button
+            variant="contained"
+            endIcon={<ArrowForwardIosIcon />}
+            sx={{ backgroundColor: "#2bd9a2", color: "black"}}
+            onClick={() => setStep(step + 1)}
+            size='medium'
+          >
+            Next
+          </Button>
+        </div>
       </div>
     </div>
   );

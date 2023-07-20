@@ -1,16 +1,15 @@
 import "./index.css";
 import { useState } from "react";
 import { Dispatch, SetStateAction } from "react";
-import {
-  dashboard,
-  bid,
-  postings,
-  addBid,
-  payment,
-  logout,
-  sidebar
-} from "src/assets/Images/";
 import { useNavigate } from "react-router-dom";
+import Typography from "@mui/material/Typography";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import PaymentIcon from "@mui/icons-material/Payment";
+import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
+import RequestPageOutlinedIcon from "@mui/icons-material/RequestPageOutlined";
+import NoteAddOutlinedIcon from "@mui/icons-material/NoteAddOutlined";
+import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
+import { FooterLogo } from "src/assets/Images";
 
 interface propType {
   breadcrumb: Dispatch<SetStateAction<string>>;
@@ -22,74 +21,87 @@ export default function UserSidebar({ breadcrumb }: propType) {
 
   const changeTab = (tabId: number, page: string) => {
     setActiveTab(tabId);
-    // breadcrumb(page);
     breadcrumb(page);
     navigate("/User/" + page);
   };
 
   return (
     <div className="sideBar">
+
+        {/* <div style={{color: 'black'}}>
+          <img src={FooterLogo} alt="" style={{backgroundColor: 'black', width: "100%"}} />
+        </div> */}
+
       <div className="sideBarButtonGrid robotoFont">
+
         <div
           className="sideBarButton"
           onClick={() => changeTab(0, "Dashboard")}
+          style={{ backgroundColor: activeTab === 0 ? "white" : "transparent" }}
         >
-          {activeTab === 0 && (
-            <div
-              style={{ height: "100%", backgroundColor: "white", width: "4px" }}
-            />
-          )}
-          <img src={dashboard} className="sideIcons" />
-          <h5>Dashboard</h5>
+          <DashboardIcon />
+          <Typography style={{ fontSize: 15, fontWeight: "bold" }}>
+            Dashboard
+          </Typography>
         </div>
 
-        <div className="sideBarButton" onClick={() => changeTab(1, "Bids")}>
-          {activeTab === 1 && (
-            <div
-              style={{ height: "100%", backgroundColor: "white", width: "4px" }}
-            />
-          )}
-          <img src={bid} className="sideIcons" />
-          <h5>Bids</h5>
+        <div
+          className="sideBarButton"
+          onClick={() => changeTab(1, "Bids")}
+          style={{ backgroundColor: activeTab === 1 ? "white" : "transparent" }}
+        >
+          <RequestPageOutlinedIcon />
+          <Typography style={{ fontSize: 15, fontWeight: "bold" }}>
+            Bids
+          </Typography>
         </div>
 
-        <div className="sideBarButton" onClick={() => changeTab(2, "Postings")}>
-          {activeTab === 2 && (
-            <div
-              style={{ height: "100%", backgroundColor: "white", width: "4px" }}
-            />
-          )}
-          <img src={postings} className="sideIcons" />
-          <h5>Postings</h5>
+        <div
+          className="sideBarButton"
+          onClick={() => changeTab(2, "Postings")}
+          style={{ backgroundColor: activeTab === 2 ? "white" : "transparent" }}
+        >
+          <ArticleOutlinedIcon />
+          <Typography style={{ fontSize: 15, fontWeight: "bold" }}>
+            Postings
+          </Typography>
         </div>
 
-        <div className="sideBarButton" onClick={() => changeTab(3, "AddBids")}>
-          {activeTab === 3 && (
-            <div
-              style={{ height: "100%", backgroundColor: "white", width: "4px" }}
-            />
-          )}
-          <img src={addBid} className="sideIcons" />
-          <h5>Add Bids</h5>
+        <div
+          className="sideBarButton"
+          onClick={() => changeTab(3, "AddBids")}
+          style={{ backgroundColor: activeTab === 3 ? "white" : "transparent" }}
+        >
+          <NoteAddOutlinedIcon />
+          <Typography style={{ fontSize: 15, fontWeight: "bold" }}>
+            Add Bids
+          </Typography>
         </div>
 
-        <div className="sideBarButton" onClick={() => changeTab(4, "Payments")}>
-          {activeTab === 4 && (
-            <div
-              style={{ height: "100%", backgroundColor: "white", width: "4px" }}
-            />
-          )}
-          <img src={payment} className="sideIcons" />
-          <h5>Payments</h5>
+        <div
+          className="sideBarButton"
+          onClick={() => changeTab(4, "Payments")}
+          style={{ backgroundColor: activeTab === 4 ? "white" : "transparent" }}
+        >
+          <PaymentIcon />
+          <Typography style={{ fontSize: 15, fontWeight: "bold" }}>
+            Payments
+          </Typography>
         </div>
 
         <div>
           <hr />
         </div>
 
-        <div className="sideBarButton" onClick={() => changeTab(4, "Logout")}>
-          <img src={logout} className="sideIcons" />
-          <h5>Logout</h5>
+        <div
+          className="sideBarButton"
+          onClick={() => changeTab(4, "Logout")}
+          style={{ backgroundColor: activeTab === 5 ? "white" : "transparent" }}
+        >
+          <LogoutOutlinedIcon />
+          <Typography style={{ fontSize: 15, fontWeight: "bold" }}>
+            Logout
+          </Typography>
         </div>
       </div>
     </div>

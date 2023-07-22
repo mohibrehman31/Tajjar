@@ -18,11 +18,10 @@ import Select from "@mui/material/Select";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { useNavigate } from 'react-router-dom'
-import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
 
 export default function Postings() {
-  const [rowsPerPage, setRowsPerPage] = useState(5);
+  const rowsPerPage = 5;
   const [page, setPage] = useState(0);
 
   const [statusFilter, setStatusFilter] = useState<string>("");
@@ -42,7 +41,7 @@ export default function Postings() {
     commodity: string,
     postingStatus: string,
     addedDate: string,
-    details: string,
+    details: string
   ) {
     return { postingType, commodity, postingStatus, addedDate, details };
   }

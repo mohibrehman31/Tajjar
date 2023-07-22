@@ -15,7 +15,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 export default function AddBids() {
-  const [rowsPerPage, setRowsPerPage] = useState(5);
+  const rowsPerPage = 5;
   const [page, setPage] = useState(0);
 
   const columns = [

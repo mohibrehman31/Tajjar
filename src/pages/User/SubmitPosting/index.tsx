@@ -15,8 +15,8 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import hazardous from "./hazardous";
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 const steps = ["Basic Details", "Motive", "End"];
 
@@ -395,7 +395,7 @@ export default function SubmitPosting() {
                     >
                       {Object.entries(
                         hazardous[userSelection["hazardous_classification"]]
-                      ).map((type, index) => (
+                      ).map((type) => (
                         <MenuItem value={type[1]}>{type[1]}</MenuItem>
                       ))}
                     </Select>
@@ -493,10 +493,10 @@ export default function SubmitPosting() {
           <Button
             variant="contained"
             startIcon={<ArrowBackIosNewIcon />}
-            sx={{ backgroundColor: "#2bd9a2", color: "black"}}
+            sx={{ backgroundColor: "#2bd9a2", color: "black" }}
             disabled={step === 0}
             onClick={() => setStep(step - 1)}
-            size='medium'
+            size="medium"
           >
             Back
           </Button>
@@ -504,9 +504,9 @@ export default function SubmitPosting() {
           <Button
             variant="contained"
             endIcon={<ArrowForwardIosIcon />}
-            sx={{ backgroundColor: "#2bd9a2", color: "black"}}
+            sx={{ backgroundColor: "#2bd9a2", color: "black" }}
             onClick={() => setStep(step + 1)}
-            size='medium'
+            size="medium"
           >
             Next
           </Button>

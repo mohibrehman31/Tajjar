@@ -46,6 +46,7 @@ const Chart = () => {
   return (
     <div>
       <ReactApexChart
+        // @ts-ignore
         options={chartData1.options}
         series={chartData1.series}
         type="area"

@@ -10,6 +10,7 @@ export default function TestimonialSlider() {
   return (
     <>
       <Swiper
+        // @ts-ignore
         slidesPerView={1}
         spaceBetween={30}
         loop={true}

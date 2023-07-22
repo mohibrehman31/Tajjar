@@ -9,7 +9,6 @@ import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
 import RequestPageOutlinedIcon from "@mui/icons-material/RequestPageOutlined";
 import NoteAddOutlinedIcon from "@mui/icons-material/NoteAddOutlined";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
-import { FooterLogo } from "src/assets/Images";
 
 interface propType {
   breadcrumb: Dispatch<SetStateAction<string>>;
@@ -27,13 +26,11 @@ export default function UserSidebar({ breadcrumb }: propType) {
 
   return (
     <div className="sideBar">
-
-        {/* <div style={{color: 'black'}}>
+      {/* <div style={{color: 'black'}}>
           <img src={FooterLogo} alt="" style={{backgroundColor: 'black', width: "100%"}} />
         </div> */}
 
       <div className="sideBarButtonGrid robotoFont">
-
         <div
           className="sideBarButton"
           onClick={() => changeTab(0, "Dashboard")}

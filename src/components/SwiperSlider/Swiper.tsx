@@ -15,6 +15,7 @@ export default function Swipeslider() {
     <>
       <div className="slider">
         <Swiper
+          // @ts-ignore
           onSwiper={setSwiperRef}
           slidesPerView={3}
           autoplay={{

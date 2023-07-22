@@ -66,6 +66,7 @@ function Spark({ title, value }: any) {
     <>
       <div id="chart-spark1">
         <ReactApexChart
+          // @ts-ignore
           options={data.options}
           series={data.series}
           type="area"

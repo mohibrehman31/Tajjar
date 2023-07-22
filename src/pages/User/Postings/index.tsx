@@ -113,8 +113,19 @@ export default function Postings() {
             </LocalizationProvider>
           </div>
 
-          <div>
-            <Button variant="outlined" onClick={() => navigate("/User/SubmitPosting")}>Add Posting</Button>
+          <div
+            style={{ cursor: "pointer" }}
+            onClick={() =>
+              setTimeout(() => {
+                navigate("/User/SubmitPosting");
+              }, 1500)
+            }
+          >
+            <lord-icon
+              src="https://cdn.lordicon.com/mecwbjnp.json"
+              trigger="click"
+              colors="primary:#121331,secondary:#08a88a"
+            />
           </div>
         </div>
 

@@ -132,7 +132,7 @@ export default function Bids() {
             <lord-icon
               src="https://cdn.lordicon.com/mecwbjnp.json"
               trigger="click"
-              colors="primary:#d1f3fa,secondary:#80eccf"
+              colors="primary:#121331,secondary:#08a88a"
             />
           </div>
         </div>

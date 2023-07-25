@@ -67,15 +67,15 @@ export const Main = () => {
     );
   };
 
-  const TestimonialsContainer = () => {
-    return (
-      <div className="testimonials-container">
-        <div className="heading-container">
-          <h1 className="heading-content">Testimonials</h1>
-        </div>
-      </div>
-    );
-  };
+  // const TestimonialsContainer = () => {
+  //   return (
+  //     <div className="testimonials-container">
+  //       <div className="heading-container">
+  //         <h1 className="heading-content">Testimonials</h1>
+  //       </div>
+  //     </div>
+  //   );
+  // };
 
   const items: TabsProps["items"] = [
     {

@@ -1,5 +1,5 @@
-@import "../../sass/style.scss";
-.main-container {
+@import "src/sass/style.scss";
+.main-forget-container {
   width: 600px;
   height: 350px;
   display: flex;
@@ -59,7 +59,7 @@
       }
     }
     .main {
-      height: 275px;
+      height: 255px;
       background-color: white;
       border-radius: 10px;
       .heading-main {

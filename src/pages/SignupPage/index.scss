@@ -1,5 +1,5 @@
-@import "../../sass/style.scss";
-.main-container {
+@import "src/sass/style.scss";
+.main-signup-container {
   width: 600px;
   height: 350px;
   display: flex;
@@ -36,30 +36,24 @@
   }
   .container2 {
     flex: 1;
-    .heading {
+    .button {
       display: flex;
-      height: 20px;
-      justify-content: flex-end;
-      margin-bottom: 5px;
-      .button {
-        display: flex;
-        border-radius: 5px;
-        margin-left: 10px;
-        background-color: #00da9f;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        .button-text {
-          font-family: Poppins;
-          font-size: 10px;
-          padding: 7px;
-          color: #242a43;
-          font-weight: 500;
-        }
+      border-radius: 5px;
+      margin-left: 10px;
+      background-color: #00da9f;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      .button-text {
+        font-family: Poppins;
+        font-size: 10px;
+        padding: 7px;
+        color: #242a43;
+        font-weight: 500;
       }
     }
     .main {
-      height: 275px;
+      height: 255px;
       background-color: white;
       border-radius: 10px;
       .heading-main {
@@ -70,26 +64,32 @@
         margin-left: 20px;
         padding-top: 30px;
       }
-      .heading-main-2 {
-        font-family: Poppins;
-        font-weight: 500;
-        font-size: 10px;
-        margin-left: 20px;
-        color: $header-font-color;
-      }
       .input-container {
         display: flex;
         justify-content: center;
         flex-direction: column;
         width: 100%;
         align-items: center;
-        .input-user {
+        .input-name {
           margin-top: 30px;
           width: 200px;
         }
-        .input-password {
+        .input-email {
           margin-top: 10px;
           width: 200px;
+        }
+      }
+      .checkbox-container {
+        display: flex;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        .checkbox-text {
+          color: black;
+          font-family: "Poppins";
+          font-size: 7px;
+          text-align: center;
+          margin-bottom: 3px;
         }
       }
       .login-button {
@@ -145,4 +145,12 @@
 }
 :where(.css-dev-only-do-not-override-1m62vyb).ant-btn-default {
   background-color: #0340ad;
+}
+:where(.css-dev-only-do-not-override-1m62vyb).ant-checkbox + span {
+  padding-inline-start: 8px;
+  padding-inline-end: 8px;
+  display: flex;
+  align-items: center;
+  height: 26px;
+  justify-content: center;
 }

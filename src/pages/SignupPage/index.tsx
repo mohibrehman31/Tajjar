@@ -1,23 +1,18 @@
 import { FooterLogo, login } from "src/assets/Images";
-import {
-  InfoCircleOutlined,
-  UserOutlined,
-  EyeInvisibleOutlined,
-  EyeTwoTone,
-  KeyOutlined,
-} from "@ant-design/icons";
-import { Button, Input, Tooltip } from "antd";
+
+import { Button, Checkbox, Input } from "antd";
 import "./index.scss";
 import { useNavigate } from "react-router-dom";
-const Login = () => {
+const Signup = () => {
   const navigation = useNavigate();
   const handleLogin = () => {
     console.log("Login Clicked");
   };
-  const handleSignup = () => {
-    navigation("/Signup");
+  const onChange = () => {
+    console.log("Checked");
   };
   const handleForget = () => {
+    console.log("forget clicked");
     navigation("/Forget");
   };
   return (
@@ -42,7 +37,7 @@ const Login = () => {
           backgroundColor: "rgba(0, 0, 0, 0.5)",
         }}
       >
-        <div className="main-container">
+        <div className="main-signup-container">
           <div className="container1">
             <div className="image-container">
               <img
@@ -56,40 +51,21 @@ const Login = () => {
             </div>
           </div>
           <div className="container2">
-            <div className="heading">
-              <span style={{ marginTop: 4 }}>Don't Have An Account?</span>
-              <div className="button">
-                <span className="button-text" onClick={handleSignup}>
-                  Get Started
-                </span>
-              </div>
-            </div>
             <div className="main">
-              <div className="heading-main">Good Evening, Welcome Back!</div>
-              <div className="heading-main-2">
-                Signin to your tajjar account here
-              </div>
+              <div className="heading-main">Get started for FREE.</div>
               <div className="input-container">
+                <Input className="input-name" placeholder="Your Name" />
                 <Input
-                  className="input-user"
-                  placeholder="Username"
-                  prefix={<UserOutlined />}
-                  suffix={
-                    <Tooltip title="Extra information">
-                      <InfoCircleOutlined
-                        style={{ color: "rgba(0,0,0,.45)" }}
-                      />
-                    </Tooltip>
-                  }
+                  className="input-email"
+                  placeholder="Your Business Email"
                 />
-                <Input.Password
-                  className="input-password"
-                  placeholder="Password"
-                  prefix={<KeyOutlined style={{ objectFit: "contain" }} />}
-                  iconRender={(visible) =>
-                    visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
-                  }
-                />
+              </div>
+              <div className="checkbox-container">
+                <Checkbox onChange={onChange}>
+                  <span className="checkbox-text">
+                    I confirm that I work at a Freight Forwarding company
+                  </span>
+                </Checkbox>
               </div>
               <div className="login-button">
                 <Button onClick={handleLogin}>
@@ -117,4 +93,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;

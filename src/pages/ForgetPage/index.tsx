@@ -1,24 +1,15 @@
 import { FooterLogo, login } from "src/assets/Images";
-import {
-  InfoCircleOutlined,
-  UserOutlined,
-  EyeInvisibleOutlined,
-  EyeTwoTone,
-  KeyOutlined,
-} from "@ant-design/icons";
+import { InfoCircleOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Input, Tooltip } from "antd";
 import "./index.scss";
 import { useNavigate } from "react-router-dom";
-const Login = () => {
+const Forget = () => {
   const navigation = useNavigate();
   const handleLogin = () => {
     console.log("Login Clicked");
   };
-  const handleSignup = () => {
-    navigation("/Signup");
-  };
-  const handleForget = () => {
-    navigation("/Forget");
+  const handleBack = () => {
+    navigation("/");
   };
   return (
     <div
@@ -42,7 +33,7 @@ const Login = () => {
           backgroundColor: "rgba(0, 0, 0, 0.5)",
         }}
       >
-        <div className="main-container">
+        <div className="main-forget-container">
           <div className="container1">
             <div className="image-container">
               <img
@@ -59,37 +50,17 @@ const Login = () => {
             <div className="heading">
               <span style={{ marginTop: 4 }}>Don't Have An Account?</span>
               <div className="button">
-                <span className="button-text" onClick={handleSignup}>
-                  Get Started
-                </span>
+                <span className="button-text">Get Started</span>
               </div>
             </div>
             <div className="main">
-              <div className="heading-main">Good Evening, Welcome Back!</div>
+              <div className="heading-main">Reset your password</div>
               <div className="heading-main-2">
-                Signin to your tajjar account here
+                Put your email below to receive the instructions and get
+                <b />a new password:
               </div>
               <div className="input-container">
-                <Input
-                  className="input-user"
-                  placeholder="Username"
-                  prefix={<UserOutlined />}
-                  suffix={
-                    <Tooltip title="Extra information">
-                      <InfoCircleOutlined
-                        style={{ color: "rgba(0,0,0,.45)" }}
-                      />
-                    </Tooltip>
-                  }
-                />
-                <Input.Password
-                  className="input-password"
-                  placeholder="Password"
-                  prefix={<KeyOutlined style={{ objectFit: "contain" }} />}
-                  iconRender={(visible) =>
-                    visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
-                  }
-                />
+                <Input className="input-user" placeholder="Business Email" />
               </div>
               <div className="login-button">
                 <Button onClick={handleLogin}>
@@ -100,13 +71,13 @@ const Login = () => {
                       fontWeight: 500,
                     }}
                   >
-                    Login
+                    Reset Password
                   </span>
                 </Button>
               </div>
               <div className="forget">
-                <span className="forget-text" onClick={handleForget}>
-                  Forgot your Password?
+                <span className="forget-text" onClick={handleBack}>
+                  Back To Home
                 </span>
               </div>
             </div>
@@ -117,4 +88,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Forget;

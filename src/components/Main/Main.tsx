@@ -14,7 +14,6 @@ import img7 from "src/assets/Images/img7.jpg";
 import img8 from "src/assets/Images/img8.jpg";
 import Swipeslider from "src/components/SwiperSlider/Swiper";
 import Testimonials from "src/components/Testimonials/Testimonials";
-import TabPreview from "../Tab/TabPreview/TabPreview";
 import TabContainer from "../Tab/TabContainer/TabContainer";
 export const Main = () => {
   const ValuesContainer = () => {

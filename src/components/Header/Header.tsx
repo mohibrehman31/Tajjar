@@ -13,7 +13,7 @@ export const Header = () => {
         <div className="sections">
           <div className="section1">Home</div>
           <div className="section2">About Us</div>
-          <div className="section3">Ship Management</div>
+          <div className="section3" onClick={() => navigate("/ShipManagement")}>Ship Management</div>
           <div className="section4">Ship Agency</div>
         </div>
         <div

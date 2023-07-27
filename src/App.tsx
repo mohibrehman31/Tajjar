@@ -7,6 +7,8 @@ import Login from "src/pages/LoginPage/index";
 import Forget from "./pages/ForgetPage";
 import Signup from "./pages/SignupPage";
 import { ShipManagement } from "./pages/ShipManagement";
+import { Services } from "./components/Services";
+import crewingData from "./Data";
 function App() {
   return (
     <>
@@ -18,6 +20,7 @@ function App() {
           <Route path="/Forget" element={<Forget />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/ShipManagement" element={<ShipManagement />} />
+          <Route path="/Services" element={<Services data={crewingData} />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -1,0 +1,28 @@
+
+.services-page{
+
+    font-family: poppins;
+
+    .services-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 80px 0px;
+    }
+
+    .services-image-container{
+        text-align: center;
+    }
+
+    .services-footer{
+        display: flex;
+        justify-content: center;
+        padding: 80px 0px;
+
+        .footer-text{
+            width: 1148px;
+        }
+    }
+}

@@ -15,3 +15,6 @@ export { default as postings } from "./postings.png";
 export { default as sidebar } from "./sidebar.png";
 export { default as login } from "./Login.jpg";
 export { default as shipManagement } from "./ship-management.png";
+export { default as servicesLeftImg } from "./services-left-img.png";
+export { default as servicesRightImg } from "./services-right-img.png";
+// export { default as crewingImage } from "./crewing-image.png";

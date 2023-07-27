@@ -4,7 +4,7 @@ import "swiper/css";
 import "./Swiper.scss";
 import { Autoplay } from "swiper/modules";
 // @ts-ignore
-import ValueCard from "src/components/ValueCard/valueCard";
+import ValueCard from "src/components/ValueCard/ValueCard";
 import CustomerSatisfactionImage from "src/assets/Images/Satisfaction.svg";
 import EfficiencyImage from "src/assets/Images/Efficiency.svg";
 import ImprovementImage from "src/assets/Images/Improvement.svg";

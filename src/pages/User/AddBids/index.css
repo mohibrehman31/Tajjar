@@ -1,0 +1,48 @@
+
+.add-bids-page{
+
+}
+
+
+.add-bids-body{
+    /* margin-top: 11vh; */
+    margin: 5vh 5vw 0vh 5vw;
+    font-family: "Roboto";
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    font-size: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh 0px;
+    background-color: #80eccf;
+    border-radius: 5vw 15vw;
+    
+}
+
+.add-bids-options-container{
+  background-color: #ffffff;
+  width: 80%;
+  margin-bottom: 2%;
+  padding: 10px 1%;
+  border-radius: 15px 15px;
+}
+
+
+.css-pilb01-JoyTable-root{
+  background-color: #ffff;
+  
+}
+.MuiPaper-root{
+  &.css-1aehqvc-MuiPaper-root{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+}
+.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root  {
+
+
+    padding: 0px 0px;
+  
+}

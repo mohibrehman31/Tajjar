@@ -14,3 +14,4 @@ export { default as payment } from "./payment.png";
 export { default as postings } from "./postings.png";
 export { default as sidebar } from "./sidebar.png";
 export { default as login } from "./Login.jpg";
+export { default as shipManagement } from "./ship-management.png";

@@ -6,6 +6,7 @@ import { MainLayout } from "./components/Layout/Layout";
 import Login from "src/pages/LoginPage/index";
 import Forget from "./pages/ForgetPage";
 import Signup from "./pages/SignupPage";
+import { ShipManagement } from "./pages/ShipManagement";
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<MainLayout />} />
           <Route path="/Forget" element={<Forget />} />
           <Route path="/Signup" element={<Signup />} />
+          <Route path="/ShipManagement" element={<ShipManagement />} />
         </Routes>
       </BrowserRouter>
     </>

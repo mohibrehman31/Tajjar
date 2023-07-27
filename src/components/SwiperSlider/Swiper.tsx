@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "./Swiper.scss";
 import { Autoplay } from "swiper/modules";
+// @ts-ignore
 import ValueCard from "src/components/ValueCard/valueCard";
 import CustomerSatisfactionImage from "src/assets/Images/Satisfaction.svg";
 import EfficiencyImage from "src/assets/Images/Efficiency.svg";
@@ -15,6 +16,7 @@ export default function Swipeslider() {
     <>
       <div className="slider">
         <Swiper
+          // @ts-ignore
           onSwiper={setSwiperRef}
           slidesPerView={3}
           autoplay={{

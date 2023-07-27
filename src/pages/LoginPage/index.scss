@@ -32,6 +32,11 @@
       left: 120px;
       color: #1c5057;
       font-weight: 600;
+      transition: 0.4s ease-in-out;
+      &:hover {
+        transition: scale 0.4s ease-in-out;
+        scale: 1.1;
+      }
     }
   }
   .container2 {

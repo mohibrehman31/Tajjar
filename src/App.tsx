@@ -4,6 +4,8 @@ import User from "./pages/User";
 import "antd/dist/reset.css";
 import { MainLayout } from "./components/Layout/Layout";
 import { ShipManagement } from "./pages/ShipManagement";
+import { Services } from "./components/Services";
+import crewingData from "./Data";
 function App() {
   return (
     <>
@@ -12,6 +14,7 @@ function App() {
           <Route path="/User/*" element={<User />} />
           <Route path="/" element={<MainLayout />} />
           <Route path="/ShipManagement" element={<ShipManagement />} />
+          <Route path="/Services" element={<Services data={crewingData} />} />
         </Routes>
       </BrowserRouter>
     </>

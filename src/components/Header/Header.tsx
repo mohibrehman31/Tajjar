@@ -8,10 +8,12 @@ export const Header = () => {
     <div className="header-container">
       <div className="inner-container">
         <div className="logo">
-          <img src={Logo} alt="" />
+          <img src={Logo} alt="" onClick={() => navigate("/")} />
         </div>
         <div className="sections">
-          <div className="section1">Home</div>
+          <div className="section1" onClick={() => navigate("/")}>
+            Home
+          </div>
           <div className="section2">About Us</div>
           <div className="section3" onClick={() => navigate("/ShipManagement")}>
             Ship Management

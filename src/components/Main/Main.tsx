@@ -19,7 +19,10 @@ import TestimonialSlider from "src/components/TestimonialSlider/TestimonialSlide
 // import TabPreview from "../Tab/TabPreview/TabPreview";
 import TabContainer from "../Tab/TabContainer/TabContainer";
 import { Reveal } from "../Motion/Reveal";
+import useFetch from "src/customHooks/useFetch";
 export const Main = () => {
+  const { loading, data, error } = useFetch(`http://localhost:1337/api/home`);
+  console.log(loading, data, error);
   const ValuesContainer = () => {
     return (
       <div className="values-container">

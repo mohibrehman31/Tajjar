@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axiosApi from "src/utils/axios";
 
-function useFetch({ url }: any) {
+function useFetch(url: any) {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<any>(null);
   const [error, setError] = useState<any>(null);
@@ -10,9 +10,7 @@ function useFetch({ url }: any) {
       setLoading(true);
       try {
         const res = await axiosApi.get(url);
-        console.log(res);
-        const json = await res;
-        setData(json);
+        setData(res?.data?.data?.attributes);
       } catch (e) {
         setLoading(false);
         setError(e);

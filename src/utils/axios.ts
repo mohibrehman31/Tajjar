@@ -2,7 +2,7 @@ import Axios, { AxiosInstance } from "axios";
 import { errorHandler } from "./errorHandler";
 
 const axiosApi: AxiosInstance = Axios.create({
-  baseURL: `http://localhost:1337/api/home`,
+  baseURL: `http://localhost:1337`,
   timeout: 30000,
 });
 class APIError extends Error {

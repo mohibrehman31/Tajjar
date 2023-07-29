@@ -8,6 +8,7 @@ import Forget from "./pages/ForgetPage";
 import Signup from "./pages/SignupPage";
 import { ShipManagement } from "./pages/ShipManagement";
 import { Services } from "./components/Services";
+import { AboutUs } from "./pages/About Us";
 import crewingData from "./Data";
 function App() {
   return (

@@ -25,6 +25,12 @@
   padding: 20px;
   border-radius: 20px;
   background-color: transparent;
+  transition: all 0.2s ease-in-out;
+
+}
+
+.sideBarButton:hover{
+  transform: translateX(10px);
 }
 
 .sideIcons {

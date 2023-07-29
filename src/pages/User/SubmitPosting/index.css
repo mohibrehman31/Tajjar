@@ -19,7 +19,7 @@
 
 .submit-posting-form {
   width: 50%;
-  height: 70%;
+  height: 80%;
   background-color: white;
   border-radius: 40px;
   margin-top: 2%;
@@ -36,14 +36,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2vh;
+  gap: 1.5vh;
 }
 .step2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2vh;
+    gap: 1.5vh;
   }
 
 .add-posting-body-footer{

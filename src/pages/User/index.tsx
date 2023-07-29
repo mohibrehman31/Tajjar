@@ -32,7 +32,7 @@ export default function User() {
             style={{ paddingLeft: 12 }}
             items={[
               {
-                href: "",
+                href: "/",
                 title: <HomeOutlined />,
               },
               {

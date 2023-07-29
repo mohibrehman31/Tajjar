@@ -14,9 +14,9 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/User/*" element={<User />} />
-          {/* <Route path="/" element={<Login />} /> */}
           <Route path="/" element={<MainLayout />} />
+          <Route path="/User/*" element={<User />} />
+          {/* <Route path="/Login" element={<Login />} /> */}
           <Route path="/Forget" element={<Forget />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/ShipManagement" element={<ShipManagement />} />

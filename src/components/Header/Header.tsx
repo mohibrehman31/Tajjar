@@ -4,6 +4,10 @@ import { RightArrow } from "src/assets/Icons";
 import { useNavigate } from "react-router-dom";
 export const Header = () => {
   const navigate = useNavigate();
+  const login = false;
+  const handlePortalNavigation = () => {
+    login ? navigate("/User/Dashboard") : navigate("/Login");
+  };
   return (
     <div className="header-container">
       <div className="inner-container">
@@ -20,10 +24,7 @@ export const Header = () => {
           </div>
           <div className="section4">Ship Agency</div>
         </div>
-        <div
-          className="portal-container"
-          onClick={() => navigate("/User/Dashboard")}
-        >
+        <div className="portal-container" onClick={handlePortalNavigation}>
           Portal
           <img src={RightArrow} style={{ marginLeft: 10 }} />
         </div>

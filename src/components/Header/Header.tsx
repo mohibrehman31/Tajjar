@@ -18,7 +18,9 @@ export const Header = () => {
           <div className="section1" onClick={() => navigate("/")}>
             Home
           </div>
-          <div className="section2">About Us</div>
+          <div className="section2" onClick={() => navigate("/AboutUs")}>
+            About Us
+          </div>
           <div className="section3" onClick={() => navigate("/ShipManagement")}>
             Ship Management
           </div>

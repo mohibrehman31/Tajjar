@@ -508,7 +508,7 @@ export default function SubmitPosting() {
             onClick={() => setStep(step + 1)}
             size="medium"
           >
-            Next
+            {step === 2 ? "Submit" : "Next"}
           </Button>
         </div>
       </div>

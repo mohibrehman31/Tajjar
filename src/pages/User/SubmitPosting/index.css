@@ -2,7 +2,7 @@
 }
 
 .submit-posting-body {
-  margin: 5vh 5vw 0vh 5vw;
+  margin: 3vh 5vw 0vh 5vw;
   font-family: "Roboto";
   font-weight: 800;
   letter-spacing: 0.02em;
@@ -12,17 +12,17 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  padding: 5vh 0px;
+  padding: 3vh 0px;
   background-color: #bcc2fc;
   border-radius: 5vw 10vw;
 }
 
 .submit-posting-form {
   width: 50%;
-  height: 80%;
+  height: 700px;
   background-color: white;
   border-radius: 40px;
-  margin-top: 2%;
+  margin-top: 10px;
   padding: 2%;
 
   display: flex;
@@ -49,10 +49,10 @@
 .add-posting-body-footer{
   display: flex;
   gap: 40px;
-  margin-top: 20px;
+  margin-top: 10px;
   align-items: center;
   background-color: #f0f2fe;
-  padding: 25px;
+  padding: 20px;
   border-radius: 5vw 5vw;
   }
 .css-1vyamtt-MuiStepLabel-labelContainer {

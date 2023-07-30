@@ -1,6 +1,6 @@
 import "./index.css";
 import Table from "@mui/joy/Table";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Paper from "@mui/material/Paper";
 import TableBody from "@mui/material/TableBody";
@@ -17,20 +17,97 @@ import Select from "@mui/material/Select";
 
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { DateRangePicker } from "@mui/x-date-pickers-pro/DateRangePicker";
 import { useNavigate } from "react-router-dom";
 import lottie from "lottie-web";
 import { defineElement } from "lord-icon-element";
+import { SingleInputDateRangeField } from "@mui/x-date-pickers-pro/SingleInputDateRangeField";
 
 defineElement(lottie.loadAnimation);
+
+interface apiDataType {
+  postingId: string;
+  userName: string;
+  cost: string;
+  status: string;
+  type: string;
+  date: string;
+  details: string;
+}
 export default function Bids() {
+  const navigate = useNavigate();
+
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [page, setPage] = useState(0);
 
-  const [statusFilter, setStatusFilter] = useState<string>("");
-  const [bidTypeFilter, setBidtypeFilter] = useState<string>("");
+  const [statusFilter, setStatusFilter] = useState<string>("None");
+  const [bidTypeFilter, setBidtypeFilter] = useState<string>("None");
+  const [dateFilter, setDateFilter] = useState<string[]>(["", ""]);
 
-  const navigate = useNavigate();
+  const [apiData, setApiData] = useState<apiDataType[]>([
+    {
+      postingId: "101",
+      userName: "Sammam",
+      cost: "600",
+      status: "Bidden",
+      type: "Posted",
+      date: "10/12/23",
+      details: "none",
+    },
+    {
+      postingId: "101",
+      userName: "Sammam",
+      cost: "600",
+      status: "Approved",
+      type: "Posted",
+      date: "10/12/23",
+      details: "none",
+    },
+    {
+      postingId: "101",
+      userName: "Sammam",
+      cost: "600",
+      status: "Approved",
+      type: "Posted",
+      date: "10/12/23",
+      details: "none",
+    },
+    {
+      postingId: "101",
+      userName: "Sammam",
+      cost: "600",
+      status: "Pending",
+      type: "Received",
+      date: "10/12/23",
+      details: "none",
+    },
+    {
+      postingId: "101",
+      userName: "Sammam",
+      cost: "600",
+      status: "Completed",
+      type: "Received",
+      date: "10/12/23",
+      details: "none",
+    },
+  ]);
+
+  const [rows, setRows] = useState<apiDataType[]>(apiData);
+
+  useEffect(() => {
+    let f1 = apiData.filter((row: apiDataType) =>
+      statusFilter !== "None" ? row.status === statusFilter : row
+    );
+    let f2 = f1.filter((row: apiDataType) =>
+      bidTypeFilter !== "None" ? row.type === bidTypeFilter : row
+    );
+
+    setRows(f2);
+  }, [statusFilter, bidTypeFilter]);
+
+  useEffect(() => {
+    console.log(dateFilter);
+  }, [dateFilter]);
 
   const columns = [
     "Posting Id",
@@ -40,26 +117,6 @@ export default function Bids() {
     "Bid Type",
     "Added Dete",
     "Details",
-  ];
-
-  function createData(
-    postingId: string,
-    userName: string,
-    cost: string,
-    status: string,
-    type: string,
-    date: string,
-    details: string
-  ) {
-    return { postingId, userName, cost, status, type, date, details };
-  }
-
-  const rows: any = [
-    createData("101", "Sammam", "600", "accepted", "xyz", "10/12/23", "none"),
-    createData("101", "Sammam", "600", "accepted", "xyz", "10/12/23", "none"),
-    createData("101", "Sammam", "600", "accepted", "xyz", "10/12/23", "none"),
-    createData("101", "Sammam", "600", "accepted", "xyz", "10/12/23", "none"),
-    createData("101", "Sammam", "600", "accepted", "xyz", "10/12/23", "none"),
   ];
 
   const handleChangeRowsPerPage = (event: any) => {
@@ -97,7 +154,7 @@ export default function Bids() {
               </Select>
             </FormControl>
 
-            <FormControl sx={{ width: 150 }} size="small">
+            <FormControl sx={{ width: 150, marginRight: 2 }} size="small">
               <InputLabel id="demo-select-small-label">
                 Bid Type Filter
               </InputLabel>
@@ -117,7 +174,17 @@ export default function Bids() {
             </FormControl>
 
             <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <DatePicker label="Date filter" sx={{ marginLeft: 2 }} />
+              <DateRangePicker
+                slots={{ field: SingleInputDateRangeField }}
+                onChange={(e: any) =>
+                  setDateFilter([
+                    e[0].$D + "/" + (e[0].$M + 1) + "/" + e[0].$y,
+                    e[1] !== null
+                      ? e[1].$D + "/" + (e[1].$M + 1) + "/" + e[1].$y
+                      : "",
+                  ])
+                }
+              />
             </LocalizationProvider>
           </div>
 

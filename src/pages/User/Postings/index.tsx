@@ -17,7 +17,8 @@ import Select from "@mui/material/Select";
 
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { SingleInputDateRangeField } from "@mui/x-date-pickers-pro/SingleInputDateRangeField";
+import { DateRangePicker } from "@mui/x-date-pickers-pro/DateRangePicker";
 import { useNavigate } from "react-router-dom";
 
 export default function Postings() {
@@ -25,7 +26,7 @@ export default function Postings() {
   const [page, setPage] = useState(0);
 
   const [statusFilter, setStatusFilter] = useState<string>("");
-  const [bidTypeFilter, setBidtypeFilter] = useState<string>("");
+  const [dateFilter, setDateFilter] = useState<string[]>(["", ""]);
 
   const navigate = useNavigate();
   const columns = [
@@ -88,27 +89,18 @@ export default function Postings() {
               </Select>
             </FormControl>
 
-            <FormControl sx={{ width: 150 }} size="small">
-              <InputLabel id="demo-select-small-label">
-                Bid Type Filter
-              </InputLabel>
-              <Select
-                labelId="demo-select-small-label"
-                id="demo-select-small"
-                value={bidTypeFilter}
-                label="Bid Type Filter"
-                onChange={(e) => setBidtypeFilter(e.target.value)}
-              >
-                <MenuItem value="None">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem value="Posted">Posted</MenuItem>
-                <MenuItem value="Received">Received</MenuItem>
-              </Select>
-            </FormControl>
-
             <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <DatePicker label="Date filter" sx={{ marginLeft: 2 }} />
+              <DateRangePicker
+                slots={{ field: SingleInputDateRangeField }}
+                onChange={(e: any) =>
+                  setDateFilter([
+                    e[0].$D + "/" + (e[0].$M + 1) + "/" + e[0].$y,
+                    e[1] !== null
+                      ? e[1].$D + "/" + (e[1].$M + 1) + "/" + e[1].$y
+                      : "",
+                  ])
+                }
+              />
             </LocalizationProvider>
           </div>
 

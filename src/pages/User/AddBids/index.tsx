@@ -12,11 +12,14 @@ import TableRow from "@mui/material/TableRow";
 
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { SingleInputDateRangeField } from "@mui/x-date-pickers-pro/SingleInputDateRangeField";
+import { DateRangePicker } from "@mui/x-date-pickers-pro/DateRangePicker";
 
 export default function AddBids() {
   const rowsPerPage = 5;
   const [page, setPage] = useState(0);
+
+  const [dateFilter, setDateFilter] = useState<string[]>(["", ""]);
 
   const columns = [
     "Posting Id",
@@ -59,7 +62,17 @@ export default function AddBids() {
       <div className="add-bids-body">
         <div className="add-bids-options-container">
           <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <DatePicker label="Date filter" />
+            <DateRangePicker
+              slots={{ field: SingleInputDateRangeField }}
+              onChange={(e: any) =>
+                setDateFilter([
+                  e[0].$D + "/" + (e[0].$M + 1) + "/" + e[0].$y,
+                  e[1] !== null
+                    ? e[1].$D + "/" + (e[1].$M + 1) + "/" + e[1].$y
+                    : "",
+                ])
+              }
+            />
           </LocalizationProvider>
         </div>
 

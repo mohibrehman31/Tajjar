@@ -17,13 +17,15 @@ import Select from "@mui/material/Select";
 
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { SingleInputDateRangeField } from "@mui/x-date-pickers-pro/SingleInputDateRangeField";
+import { DateRangePicker } from "@mui/x-date-pickers-pro/DateRangePicker";
 
 export default function Payments() {
   const rowsPerPage = 5;
   const [page, setPage] = useState(0);
 
   const [paymentFilter, setPaymentFilter] = useState<string>("");
+  const [dateFilter, setDateFilter] = useState<string[]>(["", ""]);
 
   const columns = [
     "User Name",
@@ -105,7 +107,7 @@ export default function Payments() {
     <div className="payments-page">
       <div className="payments-body">
         <div className="payments-options-container">
-          <FormControl sx={{ width: "150px", marginRight: 2 }} size="small">
+          <FormControl sx={{ width: "150px", marginRight: 2}} size="small">
             <InputLabel id="demo-select-small-label">Payment Filter</InputLabel>
             <Select
               labelId="demo-select-small-label"
@@ -123,7 +125,17 @@ export default function Payments() {
           </FormControl>
 
           <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <DatePicker label="Date filter" sx={{ marginLeft: 2 }} />
+            <DateRangePicker
+              slots={{ field: SingleInputDateRangeField }}
+              onChange={(e: any) =>
+                setDateFilter([
+                  e[0].$D + "/" + (e[0].$M + 1) + "/" + e[0].$y,
+                  e[1] !== null
+                    ? e[1].$D + "/" + (e[1].$M + 1) + "/" + e[1].$y
+                    : "",
+                ])
+              }
+            />
           </LocalizationProvider>
         </div>
 

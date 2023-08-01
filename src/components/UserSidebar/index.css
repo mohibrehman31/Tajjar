@@ -1,35 +1,34 @@
-
-
-.sideBar{
-    background-color: #242a43;
-    width: 100%;
-    height: 100%;
-    color: white
+.sideBar {
+  width: 100%;
+  height: 100%;
+  /* background-color: black; */
+  color: black;
+  background-image: linear-gradient(to top, #dfe9f3 100%, white 70%);
+}
+.sideBarButtonGrid {
+  padding-top: 50px;
+  display: grid;
+  grid-gap: 15px;
+  justify-content: center;
 }
 
-.sideBarButtonGrid{
-    padding-top: 50px;
-    display: grid;
-    grid-gap: 15px;
+.sideBarButton {
+  cursor: pointer;
+  display: flex;
+  justify-content: left;
+  font-family: "Roboto";
+  align-items: center;
+  column-gap: 10px;
+  height: 8vh;
+  max-height: 40px;
+  /* background-image: linear-gradient(90deg, #fdfbfb 0%, #ebedee 100%); */
+  padding: 20px;
+  border-radius: 20px;
+  background-color: transparent;
 }
 
-
-.sideBarButton{
-    cursor: pointer;
-    display: flex;
-    justify-content: left;
-    column-gap: 1vw;
-    align-items: center;
-    height: 8vh;
-    max-height: 40px;
-    background-color: #1c2039;
+.sideIcons {
+  height: 25px;
+  /* padding-left: 10px; */
+  color: blavk;
 }
-
-
-.sideIcons{
-    height: 30px;
-    padding-left: 10px;
-    color: white;
-}
-
-

@@ -3,7 +3,7 @@ import type { TabsProps } from "antd";
 import { Tabs } from "antd";
 import "./Main.scss";
 // import "./LandingPage.scss";
-import PetalImg from "src/components/PetalImg/PetalImg";
+// import PetalImg from "src/components/PetalImg/PetalImg";
 import img1 from "src/assets/Images/img1.jpg";
 import img2 from "src/assets/Images/img2.jpg";
 import img3 from "src/assets/Images/img3.jpg";
@@ -12,11 +12,12 @@ import img5 from "src/assets/Images/img5.jpg";
 import img6 from "src/assets/Images/img6.jpg";
 import img7 from "src/assets/Images/img7.jpg";
 import img8 from "src/assets/Images/img8.jpg";
-import Swipeslider from "src/components/SwiperSlider/Swiper";
 import TestimonialSlider from "src/components/TestimonialSlider/TestimonialSlider";
 // import Testimonials from "src/components/Testimonials/Testimonials";
 // import TabPreview from "../Tab/TabPreview/TabPreview";
 import TabContainer from "../Tab/TabContainer/TabContainer";
+import Card from "../HoverCard/card";
+import Swipeslider from "src/components/SwiperSlider/Swiper";
 export const Main = () => {
   const ValuesContainer = () => {
     return (
@@ -52,18 +53,73 @@ export const Main = () => {
         </div>
         <div className="images-container">
           <div className="row">
-            <PetalImg src={img1} className="top-left-corner-zero" />
-            <PetalImg src={img2} className="top-right-corner-zero" />
-            <PetalImg src={img3} className="bottom-left-corner-zero" />
-            <PetalImg src={img4} className="bottom-right-corner-zero" />
+            <Card
+              title="Road & rail Transportation"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              src={img1}  
+            />
+            <Card
+              title="Ocean Consolidation"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              src={img2}  
+            />
+            <Card
+              title="Ocean Freight Service"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              src={img3}  
+            />
+            <Card
+              title="Custom Clearance"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              src={img4}  
+            />
           </div>
           <div className="row">
-            <PetalImg src={img5} className="top-left-corner-zero" />
-            <PetalImg src={img6} className="top-right-corner-zero" />
-            <PetalImg src={img7} className="bottom-left-corner-zero" />
-            <PetalImg src={img8} className="bottom-right-corner-zero" />
+            <Card
+              title="DG Cargo"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              src={img5}  
+            />
+            <Card
+              title="Ship handling Charter Line Agency"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              src={img6}  
+            />
+            <Card
+              title="Project Handling"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              src={img7}  
+            />
+            <Card
+              title="Exhibition Cargo"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              src={img8}  
+            />
           </div>
-        </div>
+          <div className="row">
+            <Card
+              title="Warehousing Distribution"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              src={img5}  
+            />
+            <Card
+              title="Afghan Transit Trade"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              src={img6}  
+            />
+            <Card
+              title="Air Freight Service"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              src={img7}  
+            />
+            <Card
+              title="Sea Sir Combined Transport"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              src={img8}  
+            />
+          </div>
+</div>
+
       </div>
     );
   };

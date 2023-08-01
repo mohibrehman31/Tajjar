@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "./Swiper.scss";
@@ -10,22 +10,36 @@ import ImprovementImage from "src/assets/Images/Improvement.svg";
 import IntegrityImage from "src/assets/Images/Integrity.svg";
 
 export default function Swipeslider() {
-  const [setSwiperRef] = useState(null);
+  const swiperRef = useRef(null);
+  const [autoplayPaused, setAutoplayPaused] = useState(false);
+
+  const handleMouseEnter = () => {
+    setAutoplayPaused(true);
+  };
+
+  const handleMouseLeave = () => {
+    setAutoplayPaused(false);
+  };
+
   return (
     <>
-      <div className="slider">
+      <div className="slider" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <Swiper
           // @ts-ignore
-          onSwiper={setSwiperRef}
+          ref={swiperRef}
           slidesPerView={3}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
+            // Pause autoplay when autoplayPaused state is true
+            pauseOnMouseEnter: true,
           }}
           centeredSlides={true}
           spaceBetween={30}
           modules={[Autoplay]}
           className="mySwiper"
+          // Pass the autoplayPaused state to the Swiper component
+          autoplayPaused={autoplayPaused}
         >
           <SwiperSlide>
             <ValueCard

@@ -1,5 +1,5 @@
 import "./App.scss";
-import { Routes, Route, BrowserRouter, useNavigate } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import User from "./pages/User";
 import "antd/dist/reset.css";
 import { Home } from "./pages/HomePage";

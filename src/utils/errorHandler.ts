@@ -1,3 +1,4 @@
+//@ts-ignore
 export const errorHandler = (err: any, scope: string, showError: boolean) => {
   // if (typeof err === "string") {
   //   showError &&

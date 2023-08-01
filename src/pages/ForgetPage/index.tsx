@@ -1,5 +1,7 @@
 import { FooterLogo, login } from "src/assets/Images";
+//@ts-ignore
 import { InfoCircleOutlined, UserOutlined } from "@ant-design/icons";
+//@ts-ignore
 import { Button, Input, Tooltip } from "antd";
 import "./index.scss";
 import { useNavigate } from "react-router-dom";

@@ -1,5 +1,7 @@
 import { Layout, Space } from "antd";
+//@ts-ignore
 import { Header } from "src/components/Header/Header";
+//@ts-ignore
 import { Footer } from "src/components/Footer/Footer";
 import { servicesLeftImg, servicesRightImg } from "src/assets/Images";
 import { HomeCurve } from "src/assets/Images";

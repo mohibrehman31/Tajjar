@@ -40,6 +40,16 @@
   align-items: center;
 }
 
+@media only screen and (max-width: 480px) {
+  .filter-container{
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1vh
+  }
+  }
+
+
 .css-pilb01-JoyTable-root {
   background-color: #ffff;
 }

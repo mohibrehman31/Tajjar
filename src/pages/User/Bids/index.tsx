@@ -42,7 +42,7 @@ export default function Bids() {
 
   const [statusFilter, setStatusFilter] = useState<string>("None");
   const [bidTypeFilter, setBidtypeFilter] = useState<string>("None");
-  const [dateFilter, setDateFilter] = useState<string[]>(["", ""]);
+  const [dateFilter, setDateFilter] = useState<string[]>(['','']);
 
   const [apiData, setApiData] = useState<apiDataType[]>([
     {
@@ -51,7 +51,7 @@ export default function Bids() {
       cost: "600",
       status: "Bidden",
       type: "Posted",
-      date: "10/12/23",
+      date: "01/07/2023",
       details: "none",
     },
     {
@@ -60,7 +60,7 @@ export default function Bids() {
       cost: "600",
       status: "Approved",
       type: "Posted",
-      date: "10/12/23",
+      date: "10/06/2023",
       details: "none",
     },
     {
@@ -69,7 +69,7 @@ export default function Bids() {
       cost: "600",
       status: "Approved",
       type: "Posted",
-      date: "10/12/23",
+      date: "10/07/2023",
       details: "none",
     },
     {
@@ -78,7 +78,7 @@ export default function Bids() {
       cost: "600",
       status: "Pending",
       type: "Received",
-      date: "10/12/23",
+      date: "10/12/2023",
       details: "none",
     },
     {
@@ -87,7 +87,7 @@ export default function Bids() {
       cost: "600",
       status: "Completed",
       type: "Received",
-      date: "10/12/23",
+      date: "28/06/2023",
       details: "none",
     },
   ]);
@@ -102,8 +102,19 @@ export default function Bids() {
       bidTypeFilter !== "None" ? row.type === bidTypeFilter : row
     );
 
-    setRows(f2);
-  }, [statusFilter, bidTypeFilter]);
+    let min = dateFilter[0].split("/")
+    let max = dateFilter[1].split("/")
+    let curr = ['','',''];
+
+    let f3 = !dateFilter.includes('') ? f2.filter((row: apiDataType) => (
+            curr = row.date.split("/"),
+            (((new Date(Number(curr[2]),Number(curr[1])-1,Number(curr[0])).getTime()) >= (new Date(Number(min[2]),Number(min[1]),Number(min[0])).getTime())) &&
+            ((new Date(Number(curr[2]),Number(curr[1])-1,Number(curr[0])).getTime()) <= (new Date(Number(max[2]),Number(max[1]),Number(max[0])).getTime())))
+            )
+            ) : f2
+
+    setRows(f3);
+  }, [statusFilter, bidTypeFilter, dateFilter]);
 
   useEffect(() => {
     console.log(dateFilter);
@@ -178,9 +189,9 @@ export default function Bids() {
                 slots={{ field: SingleInputDateRangeField }}
                 onChange={(e: any) =>
                   setDateFilter([
-                    e[0].$D + "/" + (e[0].$M + 1) + "/" + e[0].$y,
+                    e[0].$D + "/" + (e[0].$M) + "/" + e[0].$y,
                     e[1] !== null
-                      ? e[1].$D + "/" + (e[1].$M + 1) + "/" + e[1].$y
+                      ? e[1].$D + "/" + (e[1].$M) + "/" + e[1].$y
                       : "",
                   ])
                 }

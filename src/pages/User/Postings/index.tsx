@@ -25,7 +25,7 @@ export default function Postings() {
   const rowsPerPage = 5;
   const [page, setPage] = useState(0);
 
-  const [statusFilter, setStatusFilter] = useState<string>("");
+  const [statusFilter, setStatusFilter] = useState<string>("");t
   const [dateFilter, setDateFilter] = useState<string[]>(["", ""]);
 
   const navigate = useNavigate();

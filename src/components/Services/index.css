@@ -1,28 +1,26 @@
+.services-page {
+  font-family: poppins;
 
-.services-page{
+  .services-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 8rem 0rem;
+  }
 
-    font-family: poppins;
+  .services-image-container {
+    text-align: center;
+  }
 
-    .services-header{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        padding: 80px 0px;
+  .services-footer {
+    display: flex;
+    justify-content: center;
+    padding: 8rem 0rem;
+
+    .footer-text {
+      width: 114.8rem;
     }
-
-    .services-image-container{
-        text-align: center;
-    }
-
-    .services-footer{
-        display: flex;
-        justify-content: center;
-        padding: 80px 0px;
-
-        .footer-text{
-            width: 1148px;
-        }
-    }
+  }
 }

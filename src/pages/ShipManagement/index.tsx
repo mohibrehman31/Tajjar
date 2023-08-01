@@ -21,9 +21,11 @@ export const ShipManagement = () => (
           backgroundImage: `url(${HomeCurve})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
+          // height: "70rem",
+          width: "90rem",
         }}
       >
-        <Header />
+        {/* <Header /> */}
 
         <div className="ship-management-content">
           <div className="ship-management-head">
@@ -32,9 +34,9 @@ export const ShipManagement = () => (
                 <text
                   style={{
                     color: "#242A43",
-                    fontSize: "20px",
+                    fontSize: "2rem",
                     fontWeight: "600",
-                    lineHeight: "60px",
+                    lineHeight: "6rem",
                   }}
                 >
                   Ship Management
@@ -43,8 +45,8 @@ export const ShipManagement = () => (
                 <span
                   style={{
                     color: "#00DA9F",
-                    fontSize: "40px",
-                    lineHeight: "50px",
+                    fontSize: "4rem",
+                    lineHeight: "5rem",
                   }}
                 >
                   Navigating{" "}
@@ -52,8 +54,8 @@ export const ShipManagement = () => (
                 <text
                   style={{
                     color: "#2D3194",
-                    fontSize: "40px",
-                    lineHeight: "50px",
+                    fontSize: "4rem",
+                    lineHeight: "5rem",
                   }}
                 >
                   Excellence:
@@ -62,9 +64,9 @@ export const ShipManagement = () => (
                 <text
                   style={{
                     color: "#242A43",
-                    fontSize: "40px",
+                    fontSize: "4rem",
                     fontWeight: "300",
-                    lineHeight: "50px",
+                    lineHeight: "5rem",
                   }}
                 >
                   Explore Exceptional Ship
@@ -73,9 +75,9 @@ export const ShipManagement = () => (
                 <text
                   style={{
                     color: "#242A43",
-                    fontSize: "40px",
+                    fontSize: "4rem",
                     fontWeight: "300",
-                    lineHeight: "50px",
+                    lineHeight: "5rem",
                   }}
                 >
                   Management Services
@@ -83,10 +85,10 @@ export const ShipManagement = () => (
                 <p
                   style={{
                     color: "#424242",
-                    fontSize: "15px",
+                    fontSize: "1.5rem",
                     fontWeight: "300",
-                    marginTop: "10px",
-                    lineHeight: "20px",
+                    marginTop: "1rem",
+                    lineHeight: "2rem",
                   }}
                 >
                   TAJJAR-UL-BAHR's primary focus is to deliver cost-effective
@@ -105,6 +107,7 @@ export const ShipManagement = () => (
               <img
                 src={shipManagement}
                 className="ship-management-head-image"
+                style={{ height: "30rem", width: "30rem" }}
               />
             </div>
           </div>
@@ -115,9 +118,9 @@ export const ShipManagement = () => (
                 <text
                   style={{
                     color: "#0340AD",
-                    fontSize: "20px",
+                    fontSize: "2rem",
                     fontWeight: "600",
-                    lineHeight: "60px",
+                    lineHeight: "6rem",
                   }}
                 >
                   What's Included?
@@ -126,9 +129,9 @@ export const ShipManagement = () => (
                 <text
                   style={{
                     color: "black",
-                    fontSize: "35px",
+                    fontSize: "3.5rem",
                     fontWeight: "400",
-                    lineHeight: "45px",
+                    lineHeight: "4.5rem",
                   }}
                 >
                   Unleashing Our Full Ship Management Services!
@@ -139,9 +142,9 @@ export const ShipManagement = () => (
                 <p
                   style={{
                     color: "#424242",
-                    fontSize: "15px",
+                    fontSize: "1.5rem",
                     fontWeight: "300",
-                    lineHeight: "20px",
+                    lineHeight: "2rem",
                   }}
                 >
                   Embark on a journey of operational excellence with our diverse
@@ -197,7 +200,7 @@ export const ShipManagement = () => (
             </div>
           </div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Layout>
   </Space>

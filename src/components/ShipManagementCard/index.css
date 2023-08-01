@@ -10,22 +10,22 @@
   font-family: Poppins;
 
   .ship-management-card-icon {
-    height: 100px;
-    width: 100px;
+    height: 10rem;
+    width: 10rem;
   }
   .ship-management-card-heading {
-    font-size: 20px;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 45px;
+    line-height: 4.5rem;
   }
 
   .ship-management-card-description {
-    max-width: 202px;
+    max-width: 20rem;
     color: #424242;
-    font-size: 12px;
+    font-size: 1.2rem;
     font-style: normal;
     font-weight: 300;
-    line-height: 15px; /* 125% */
+    line-height: 1.5rem; /* 125% */
   }
 }

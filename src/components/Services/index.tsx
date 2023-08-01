@@ -35,7 +35,7 @@ export const Services = ({ data }: propType) => {
             backgroundSize: "contain",
           }}
         >
-          <Header />
+          {/* <Header /> */}
           <div className="services-page">
             <div className="services-header">
               {/* <Rotate> */}
@@ -44,7 +44,9 @@ export const Services = ({ data }: propType) => {
                 style={{
                   objectFit: "contain",
                   position: "absolute",
-                  transform: "translate(-440px, -70px)",
+                  transform: "translate(-44rem, -7rem)",
+                  height: "25rem",
+                  width: "25rem",
                 }}
               />
               {/* </Rotate> */}
@@ -54,7 +56,9 @@ export const Services = ({ data }: propType) => {
                 style={{
                   objectFit: "contain",
                   position: "absolute",
-                  transform: "translate(480px)",
+                  transform: "translate(48rem)",
+                  height: "25rem",
+                  width: "25rem",
                 }}
               />
               {/* </Rotate> */}
@@ -62,9 +66,9 @@ export const Services = ({ data }: propType) => {
               <text
                 style={{
                   color: "#00DA9F",
-                  fontSize: "40px",
+                  fontSize: "4rem",
                   fontWeight: "600",
-                  lineHeight: "60px",
+                  lineHeight: "6rem",
                 }}
               >
                 {data.h1}
@@ -72,11 +76,11 @@ export const Services = ({ data }: propType) => {
               <text
                 style={{
                   color: "#201C1D",
-                  fontSize: "65px",
+                  fontSize: "6rem",
                   fontWeight: "600",
-                  lineHeight: "73px",
-                  width: "1100px",
-                  transform: "translate(0px)",
+                  lineHeight: "1",
+                  width: "110rem",
+                  transform: "translate(0rem)",
                 }}
               >
                 {data.s1}
@@ -84,12 +88,12 @@ export const Services = ({ data }: propType) => {
               <p
                 style={{
                   color: "#424242",
-                  fontSize: "15px",
+                  fontSize: "1.5rem",
                   fontWeight: "400",
-                  lineHeight: "20px",
-                  width: "750px",
-                  transform: "translate(0px)",
-                  marginTop: "5px",
+                  lineHeight: "2rem",
+                  width: "75rem",
+                  transform: "translate(0rem)",
+                  marginTop: "0.5rem",
                 }}
               >
                 {data.d1}
@@ -107,9 +111,9 @@ export const Services = ({ data }: propType) => {
                 <text
                   style={{
                     color: "#0083E0",
-                    fontSize: "40px",
+                    fontSize: "4rem",
                     fontWeight: "400",
-                    lineHeight: "20px",
+                    lineHeight: "2rem",
                   }}
                 >
                   {data.h2}
@@ -118,9 +122,9 @@ export const Services = ({ data }: propType) => {
                 <text
                   style={{
                     color: "#000",
-                    fontSize: "40px",
+                    fontSize: "4rem",
                     fontWeight: "400",
-                    lineHeight: "60px",
+                    lineHeight: "6rem",
                   }}
                 >
                   {data.s2}
@@ -128,9 +132,9 @@ export const Services = ({ data }: propType) => {
                 <p
                   style={{
                     color: "#424242",
-                    fontSize: "16px",
+                    fontSize: "1.6rem",
                     fontWeight: "400",
-                    lineHeight: "25px",
+                    lineHeight: "2.5rem",
                   }}
                 >
                   {data.d2}
@@ -138,7 +142,7 @@ export const Services = ({ data }: propType) => {
               </div>
             </div>
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </Layout>
     </Space>

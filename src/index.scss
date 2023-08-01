@@ -19,6 +19,11 @@
   margin: 0;
   padding: 0;
 }
+@media (width>998px) {
+  :root {
+    font-size: 55%;
+  }
+}
 @media (width<=998px) {
   :root {
     font-size: 55%;
@@ -27,6 +32,11 @@
 @media (width<=768px) {
   :root {
     font-size: 45%;
+  }
+}
+@media (width<=412px) {
+  :root {
+    font-size: 25%;
   }
 }
 

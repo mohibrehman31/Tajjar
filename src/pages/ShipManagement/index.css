@@ -1,61 +1,56 @@
-.ship-management-content{
-    /* margin-left: 17%; */
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-family: poppins;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+.ship-management-content {
+  /* margin-left: 17%; */
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  font-family: poppins;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.ship-management-head {
+  display: flex;
+  max-width: 70%;
 
-
-.ship-management-head{
-    display: flex;
-    max-width: 70%;
-
-    .column-1{
+  .column-1 {
     max-width: 90%;
-    }
-
+  }
 }
 
-.ship-management-head-image{
-    border-radius: 0px 200px 200px 200px;
-    margin-top: 40px;
-    width: 350px;
-    height: 350px;
-    background-image: url("Tajjar/src/assets/Images/ship-management.png");
-    object-fit: cover;
+.ship-management-head-image {
+  border-radius: 0px 20rem 20rem 20rem;
+  margin-top: 4rem;
+  width: 35rem;
+  height: 35rem;
+  background-image: url("Tajjar/src/assets/Images/ship-management.png");
+  object-fit: cover;
 }
 
-.ship-management-body{
+.ship-management-body {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  margin-top: 10rem;
+
+  .row-1 {
     display: flex;
-    flex-direction: column;
-    max-width: 70%;
-    margin-top: 100px;
+    align-items: center;
+    height: 20rem;
+  }
 
-    .row-1{
-        display: flex;
-        align-items: center;
-        height: 200px;
-    }
+  .row-2-1 {
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: start;
+    row-gap: 3rem;
+    column-gap: 0px;
+  }
 
-    .row-2-1{
-        margin-top: 100px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        align-items: start; 
-        row-gap: 30px;
-        column-gap: 0px;
-    }
-
-    .row-2-2{
-        margin-top: 30px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        align-items: start; 
-    }
-
+  .row-2-2 {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
 }

@@ -1,40 +1,26 @@
-/* 1rem = 10px */
-.services-page{
-
+.services-page {
     font-family: poppins;
-
-    .services-header{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        padding: 8rem 0rem;
+  
+    .services-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      padding: 8rem 0rem;
     }
-
-    .services-image-container{
-        text-align: center;
+  
+    .services-image-container {
+      text-align: center;
     }
-
-    .services-footer{
-        display: flex;
-        justify-content: center;
-        padding: 8rem 0rem;
-
-        .footer-text{
-            width: 114.8rem;
-        }
+  
+    .services-footer {
+      display: flex;
+      justify-content: center;
+      padding: 8rem 0rem;
+  
+      .footer-text {
+        width: 114.8rem;
+      }
     }
-}
-
-@media(max-width:998px){
-    html{
-        font-size: 55%;
-    }
-}
-
-@media(max-width:768px){
-    html{
-        font-size: 45%;
-    }
-}
+  }

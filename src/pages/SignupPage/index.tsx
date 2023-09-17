@@ -3,10 +3,15 @@ import { FooterLogo, login } from "src/assets/Images";
 import { Button, Checkbox, Input } from "antd";
 import "./index.scss";
 import { useNavigate } from "react-router-dom";
+import axiosApi from "src/utils/axios";
 const Signup = () => {
   const navigation = useNavigate();
-  const handleLogin = () => {
-    console.log("Login Clicked");
+  const handleSignup = () => {
+    const res = axiosApi.post("http://localhost:1337/api/auth/local", {
+      name: "Mohib",
+      number: "03362539861",
+    });
+    console.log("🚀 ~ file: index.tsx:14 ~ handleSignup ~ res:", res);
   };
   const onChange = () => {
     console.log("Checked");
@@ -59,6 +64,11 @@ const Signup = () => {
                   className="input-email"
                   placeholder="Your Business Email"
                 />
+                <Input
+                  className="input-number"
+                  placeholder="Your Phone Number"
+                  type="number"
+                />
               </div>
               <div className="checkbox-container">
                 <Checkbox onChange={onChange}>
@@ -68,7 +78,7 @@ const Signup = () => {
                 </Checkbox>
               </div>
               <div className="login-button">
-                <Button onClick={handleLogin}>
+                <Button onClick={handleSignup}>
                   <span
                     style={{
                       color: "white",
@@ -76,14 +86,9 @@ const Signup = () => {
                       fontWeight: 500,
                     }}
                   >
-                    Login
+                    Signup
                   </span>
                 </Button>
-              </div>
-              <div className="forget">
-                <span className="forget-text" onClick={handleForget}>
-                  Forgot your Password?
-                </span>
               </div>
             </div>
           </div>

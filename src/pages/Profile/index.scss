@@ -1,0 +1,280 @@
+.sidebar-container {
+  //   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0px 4px 4px 0px #00000040;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 6.3rem;
+  height: inherit;
+  .parnity-container {
+    width: 4.6rem;
+    height: 4.9rem;
+    margin-top: 1rem;
+    margin-bottom: 10rem;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .icons-container {
+    width: 5rem;
+    height: 26.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 5rem;
+      height: 5rem;
+      cursor: pointer;
+      &:hover {
+        &::after {
+          position: absolute;
+          left: 6.2rem;
+          content: "";
+          width: 0.3rem;
+          height: 3.6rem;
+          background-color: #5989d4;
+          transition: 0.3s;
+        }
+      }
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+}
+.profile {
+  display: flex;
+  .main {
+    width: calc(100vw - 6.3rem);
+    height: fit-content;
+    background: #f1f1fe;
+    .navigation-container {
+      display: flex;
+      justify-content: center;
+      .navigation {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 4.6rem;
+        width: 55.3rem;
+        height: 3.8rem;
+        top: 4.6rem;
+        left: 39rem;
+        border-radius: 3.25rem;
+        border: 0.1rem;
+        .nav-item {
+          width: 8.4rem;
+          height: 3.7rem;
+          border-radius: 3.25rem;
+          border: 1px solid #545454;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          box-shadow: 0px 4px 4px 0px #00000040;
+          span {
+            font-family: TTInterphasesPro-Rg;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2rem;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #545454;
+            font-family: TT;
+          }
+          &.focused {
+            background: #081097;
+            span {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+    .heading-container {
+      display: flex;
+      justify-content: center;
+      margin-block: 2.5rem;
+      span {
+        font-family: TTInterphasesPro-Bd;
+        font-size: 33px;
+        font-weight: 700;
+        line-height: 41px;
+        color: black;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+    }
+    .sub-heading-container {
+      display: flex;
+      justify-content: center;
+      span {
+        font-family: TTInterphasesPro-Md;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 23px;
+        color: black;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+    }
+    .searchbox-container {
+      display: flex;
+      justify-content: center;
+      .searchbox {
+        width: 80rem;
+        height: 5.5rem;
+        display: flex;
+        align-items: center;
+        padding-inline: 1rem;
+        margin-block: 1.5rem;
+        background: white;
+        img {
+          margin-inline: 1rem;
+          width: 2rem;
+          height: 2rem;
+        }
+        .ant-input-lg {
+          padding: 0;
+          font-size: 2rem;
+          line-height: 0;
+          border-radius: 0.8rem;
+          border-color: transparent;
+          color: #9f9f9f;
+          background: transparent;
+          &:hover {
+            border-color: transparent;
+          }
+          &:focus {
+            border-color: transparent;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+    .main-sub-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      width: calc(100vw - 20rem);
+      height: fit-content;
+      margin-left: 5rem;
+      .heading {
+        span {
+          font-family: TTInterphasesPro-Bd;
+          font-size: 2.7rem;
+          font-weight: 700;
+          line-height: 3.4rem;
+          letter-spacing: 0em;
+          color: black;
+          text-align: left;
+        }
+      }
+      .sub-heading {
+        span {
+          font-family: TTInterphasesPro-Md;
+          font-size: 1.6rem;
+          font-weight: 500;
+          line-height: 2rem;
+          letter-spacing: 0em;
+          text-align: left;
+          color: black;
+        }
+      }
+      .info {
+        margin-top: 3.3rem;
+        span {
+          font-family: TTInterphasesPro-Bd;
+          font-size: 1.8rem;
+          font-weight: 700;
+          line-height: 2.3rem;
+          letter-spacing: 0em;
+          color: black;
+          text-align: left;
+        }
+      }
+    }
+    .grid-container {
+      width: calc(100vw - 20rem);
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      margin-inline: 5rem;
+      margin-block: 1.5rem;
+      .grid-1 {
+        display: grid;
+        grid-template-columns: repeat(4, 25.6rem);
+        grid-template-rows: repeat(2, 9rem);
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 1.5rem;
+        .container {
+          display: flex;
+          border-radius: 1rem;
+          background-color: white;
+          .inner-container {
+            width: 25.6rem;
+            height: 9rem;
+            display: flex;
+            flex: 1;
+            .image-container {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex: 1;
+              img {
+                height: 4.6rem;
+                width: 4.6rem;
+              }
+            }
+            .main-container {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: inherit;
+              flex: 3;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width<=2672px) {
+  :root {
+    font-size: 62.5%;
+  }
+}
+@media (width<=1920px) {
+}
+
+@media (width<=1366px) {
+  :root {
+    font-size: 36%;
+  }
+}
+
+@media (width<=1024px) {
+  .profile .main .grid-container .grid-1 {
+    grid-template-columns: repeat(3, 25.6rem);
+    grid-template-rows: repeat(3, 9rem);
+  }
+}
+
+@media (width<=768px) {
+  .profile .main .grid-container .grid-1 {
+    grid-template-columns: repeat(2, 25.6rem);
+    grid-template-rows: repeat(4, 9rem);
+  }
+}
+@media (width<=500px) {
+  .profile .main .grid-container .grid-1 {
+    grid-template-columns: repeat(2, 25.6rem);
+    grid-template-rows: repeat(4, 9rem);
+  }
+}

@@ -10,12 +10,14 @@ import { ShipManagement } from "./pages/ShipManagement";
 import { Services } from "./components/Services";
 import { AboutUs } from "./pages/About Us";
 import crewingData from "./Data";
+import ProfilePage from "./pages/Profile";
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<ProfilePage />} />
+          {/* <Route path="/" element={<Home />} /> */}
           <Route path="/User/*" element={<User />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Forget" element={<Forget />} />

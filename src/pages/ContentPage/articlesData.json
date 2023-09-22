@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "image": "src/assets/ArticleImages/Article4.svg",
+    "title": "Productivity tools: how to use them in your frieght forwarder",
+    "description": "Streamline your frieght forwarder workflow, improve communication, and increase efficiency with the following productivity tools."
+  },
+  {
+    "id": 2,
+    "image": "src/assets/ArticleImages/Article3.svg",
+    "title": "The common risks in freight forwarding and how you can manage them",
+    "description": "Check out how you can prevent and manage the common risks of the freight forwarding process."
+  },
+  {
+    "id": 3,
+    "image": "src/assets/ArticleImages/Article2.svg",
+    "title": "Exploring Turkey's Freight Market",
+    "description": "If you want to explore Turkey's freight industry take a quick road to be aware of the particularities of the local market."
+  },
+  {
+    "id": 4,
+
+    "image": "src/assets/ArticleImages/Article9.svg",
+    "title": "Make your forwarder more efficient: get rid of the paperwork",
+    "description": "Get rid of manual logistics paperwork and replace it with automated technology to help you make your forwarder more efficient."
+  },
+  {
+    "id": 5,
+
+    "image": "src/assets/ArticleImages/Article.svg",
+    "title": "How can I make my forwarder more sustainable?",
+    "description": "Check out how you can make your forwarder more sustainable once and for all"
+  },
+  {
+    "id": 6,
+    "image": "src/assets/ArticleImages/Article5.svg",
+    "title": "How can a freight forwarder close more shipments?",
+    "description": "Here are some tips on how you can enjoy the peak season and run your day-to-day operation smoothly, start preparing."
+  },
+  {
+    "id": 7,
+
+    "image": "src/assets/ArticleImages/Article6.svg",
+    "title": "Shipping to China: A Guide to What You Need to Know",
+    "description": "If you are a forwarder looking to explore the Chinese market, here are some tips for shipping to China that you need to know."
+  },
+  {
+    "id": 8,
+
+    "image": "src/assets/ArticleImages/Article11.svg",
+    "title": "How to increase freight forwarder visibility",
+    "description": "Learn how to increase your forwarder company visibility in such a competitive industry and the ways to do it."
+  },
+  {
+    "id": 9,
+
+    "image": "src/assets/ArticleImages/ArticleTrack.svg",
+    "title": "4 best practices for freight forwarding introduction email",
+    "description": "Building a good introduction email is crucial for a successful beginning of a height partnership, see 4 prqactices to help you out"
+  },
+  {
+    "id": 10,
+
+    "image": "src/assets/ArticleImages/Article10.svg",
+    "title": "Leadership in logistics: How to improve and its benefits",
+    "description": "Check out 5 essential skills for you to master in your forwarder order to be a great logistics leader and it's benefits."
+  },
+  {
+    "id": 11,
+    "image": "src/assets/ArticleImages/Article8.svg",
+    "title": "Business Intelligence in logistics industry",
+    "description": "Find out how business Intelligence can help your freight forwarding business escalate through an incontestable database."
+  }
+]

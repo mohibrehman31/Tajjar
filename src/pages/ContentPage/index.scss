@@ -1,0 +1,118 @@
+.content-container {
+  display: flex;
+  width: inherit;
+  height: inherit;
+  .main {
+    width: calc(100vw - 6.3rem);
+    height: fit-content;
+    background: #f1f1fe;
+    .heading-container {
+      display: flex;
+      justify-content: center;
+      margin-block: 2.5rem;
+      span {
+        font-family: TTInterphasesProVariable;
+        font-size: 33px;
+        font-weight: 700;
+        line-height: 41px;
+        color: black;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+    }
+    .sub-heading-container {
+      display: flex;
+      justify-content: center;
+      span {
+        font-family: TTInterphasesPro-Md;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 23px;
+        color: black;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+    }
+    .main-sub-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 5rem;
+      .articles-container {
+        .title-heading {
+          width: 24.5rem;
+          span {
+            font-family: TTInterphasesProVariable;
+            font-weight: 700;
+            font-size: 1.7rem;
+            line-height: 2.1rem;
+          }
+        }
+        .article-description {
+          width: 28.7rem;
+          margin-top: 2rem;
+          span {
+            font-family: TTInterphasesProVariable;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.6rem;
+          }
+        }
+        .categories-content-container {
+          margin-top: 1rem;
+          .categories-heading {
+            span {
+              font-family: TTInterphasesProVariable;
+              font-weight: 700;
+              font-size: 1.7rem;
+              line-height: 2.1rem;
+              color: black;
+            }
+          }
+          .top-content-heading {
+            margin-top: 6rem;
+            margin-bottom: 1rem;
+            span {
+              font-family: TTInterphasesProVariable;
+              font-weight: 700;
+              font-size: 1.7rem;
+              line-height: 2.1rem;
+              color: black;
+            }
+          }
+          .categories-container {
+            .category {
+              border-radius: 2rem;
+              background-color: #c1c1f9;
+              margin-top: 1rem;
+              padding: 0.5rem;
+              width: fit-content;
+              span {
+                color: #6f6f6f;
+              }
+            }
+          }
+          .top-content-container {
+            .top-content {
+              display: flex;
+              margin-bottom: 1rem;
+
+              .content-image {
+                max-width: 100%;
+                height: auto;
+              }
+              .content-description-text {
+                font-family: TTInterphasesProVariable;
+                font-weight: 400;
+                font-size: 1.2rem;
+                line-height: 1.5rem;
+                color: #323232;
+                margin-left: 0.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -19,7 +19,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Events />} />
+          <Route path="/" element={<ProfilePage />} />
           <Route path="/" element={<Forwarders />} />
           {/* <Route path="/" element={<Home />} /> */}
           <Route path="/User/*" element={<User />} />

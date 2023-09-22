@@ -51,8 +51,17 @@
     }
   }
   .hidden-container {
-    width: 0rem;
     height: inherit;
     background-color: red;
+    animation: transformation 0.5s ease-in-out;
+    width: 30rem;
+    @keyframes transformation {
+      0% {
+        width: 0rem;
+      }
+      100% {
+        width: 30rem;
+      }
+    }
   }
 }

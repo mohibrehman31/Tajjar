@@ -10,12 +10,16 @@ import { Services } from "./components/Services";
 import { AboutUs } from "./pages/About Us";
 import crewingData from "./Data";
 import ProfilePage from "./pages/Profile";
+import Events from "./pages/EventsPage";
+import Content from "./pages/ContentPage";
+import "./assets/Fonts/TTInterphasesProVariable.ttf";
 import Forwarders from "./pages/Forwarders";
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<ProfilePage />} />
           <Route path="/" element={<Forwarders />} />
           {/* <Route path="/" element={<Home />} /> */}
           <Route path="/User/*" element={<User />} />

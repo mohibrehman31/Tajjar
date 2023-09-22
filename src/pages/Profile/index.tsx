@@ -12,6 +12,8 @@ import {
 import { Input } from "antd";
 import { getProfileData } from "src/services/getProfileData";
 import { profile } from "./profile";
+import Navigation from "src/components/Navigation";
+import Sidebar from "src/components/Sidebar";
 function ProfilePage() {
   const initialState = {
     exploreFocused: false,
@@ -42,81 +44,9 @@ function ProfilePage() {
 
   return (
     <div className="profile">
-      <div className="sidebar-container">
-        <div className="parnity-container">
-          <img src={parnityLogo} alt="" />
-        </div>
-        <div className="icons-container">
-          <div className="image-container">
-            <img src={world} alt="" />
-          </div>
-          <div className="image-container">
-            <img src={apartment} alt="" />
-          </div>
-          <div className="image-container">
-            <img src={handshake} alt="" />
-          </div>
-          <div className="image-container">
-            <img src={thinkbox} alt="" />
-          </div>
-          <div className="image-container">
-            <img src={connect} alt="" />
-          </div>
-        </div>
-      </div>
+      <Sidebar />
       <div className="main">
-        <div className="navigation-container">
-          <div className="navigation">
-            <div
-              className={`nav-item ${
-                focusedState.exploreFocused ? "focused" : ""
-              }`}
-              onClick={() => handleItemClick("exploreFocused")}
-            >
-              <span>Explore</span>
-            </div>
-            <div
-              className={`nav-item ${
-                focusedState.businessFocused ? "focused" : ""
-              }`}
-              onClick={() => handleItemClick("businessFocused")}
-            >
-              <span>Forwarders</span>
-            </div>
-            <div
-              className={`nav-item ${
-                focusedState.forwardFocused ? "focused" : ""
-              }`}
-              onClick={() => handleItemClick("forwardFocused")}
-            >
-              <span>Businesses</span>
-            </div>
-            <div
-              className={`nav-item ${
-                focusedState.eventFocused ? "focused" : ""
-              }`}
-              onClick={() => handleItemClick("eventFocused")}
-            >
-              <span>Events</span>
-            </div>
-            <div
-              className={`nav-item ${
-                focusedState.contentFocused ? "focused" : ""
-              }`}
-              onClick={() => handleItemClick("contentFocused")}
-            >
-              <span>Content</span>
-            </div>
-            <div
-              className={`nav-item ${
-                focusedState.perkFocused ? "focused" : ""
-              }`}
-              onClick={() => handleItemClick("perkFocused")}
-            >
-              <span>Perks</span>
-            </div>
-          </div>
-        </div>
+        <Navigation />
         <div className="heading-container">
           <span>{profile?.data?.attributes?.Heading}</span>
         </div>

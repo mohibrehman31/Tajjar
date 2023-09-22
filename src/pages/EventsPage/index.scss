@@ -1,0 +1,80 @@
+.events-container {
+  display: flex;
+  width: inherit;
+  height: inherit;
+  .main {
+    width: calc(100vw - 6.3rem);
+    height: inherit;
+    background: #f1f1fe;
+    .events {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 5rem;
+      .event-item {
+        position: relative;
+        .event-image {
+          img {
+            position: relative;
+            height: 55.1rem;
+            max-width: 32.9rem;
+          }
+        }
+        .event-content {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          transform: translate(1rem, -30rem);
+          z-index: 1;
+          .event-type {
+            display: flex;
+            align-items: center;
+            .event-type-heading {
+              font-size: 1.8rem;
+              font-weight: 500;
+              .event-type-text {
+                color: #a3a6fc;
+                margin-left: 0.4rem;
+              }
+            }
+          }
+          .event-heading {
+            span {
+              font-size: 4.2rem;
+              font-weight: 500;
+            }
+          }
+          .webinar-event-heading {
+            margin-top: 4rem;
+            span {
+              font-size: 4.2rem;
+              font-weight: 500;
+            }
+          }
+          .event-sub-heading {
+            span {
+              font-family: TTInterphasesProVariable;
+              font-size: 2rem;
+            }
+          }
+          .webinar-event-subHeading {
+            span {
+              font-family: TTInterphasesProVariable;
+              font-size: 2rem;
+              color: #c5b792;
+            }
+          }
+          .button {
+            transform: translate(0, 2rem);
+            span {
+              font-size: 1.4rem;
+              line-height: 1.7rem;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+}

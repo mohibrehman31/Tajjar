@@ -2,10 +2,15 @@
 #root {
   width: 100%;
   height: 100%;
+  font-family: TTInterphasesProVariable;
 }
 * {
   margin: 0;
   padding: 0;
-  // box-sizing: border-box;
-  // background: rgb(0 100 0 / 0.05) !important;
+}
+@font-face {
+  font-family: "TTInterphasesProVariable";
+  src: local("TTInterphasesProVariable"),
+    url("./assets/Fonts/TTInterphasesProVariable.ttf") format("truetype");
+  font-weight: bold;
 }

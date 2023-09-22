@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "mainImage": "src/assets/Events/Event1.svg",
+    "eventTypeIcon": "src/assets/Events/DayEvent.svg",
+    "eventType": "Day",
+    "heading": "Virtual Meetings",
+    "subHeading": "Online 1-on-'s inside parnity at no extra fees"
+  },
+  {
+    "id": 2,
+    "mainImage": "src/assets/Events/Event2.svg",
+    "eventTypeIcon": "src/assets/Events/ExchangeIcon.svg",
+    "eventType": "Xchange",
+    "heading": "In-Person meetings",
+    "subHeading": "Las Vegas, USA February 1 to 3, 2024"
+  },
+  {
+    "id": 3,
+    "mainImage": "src/assets/Events/Event3.svg",
+    "heading": "Live Webinars",
+    "subHeading": "Coming soon"
+  }
+]

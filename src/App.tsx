@@ -2,7 +2,6 @@ import "./App.scss";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import User from "./pages/User";
 import "antd/dist/reset.css";
-import { Home } from "./pages/HomePage";
 import Login from "src/pages/LoginPage/index";
 import Forget from "./pages/ForgetPage";
 import Signup from "./pages/SignupPage";
@@ -14,12 +13,14 @@ import ProfilePage from "./pages/Profile";
 import Events from "./pages/EventsPage";
 import Content from "./pages/ContentPage";
 import "./assets/Fonts/TTInterphasesProVariable.ttf";
+import Forwarders from "./pages/Forwarders";
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Events />} />
+          <Route path="/" element={<Forwarders />} />
           {/* <Route path="/" element={<Home />} /> */}
           <Route path="/User/*" element={<User />} />
           <Route path="/Login" element={<Login />} />

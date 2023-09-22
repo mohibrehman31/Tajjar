@@ -10,9 +10,8 @@ import {
   search,
 } from "src/assets/Images";
 import { Input } from "antd";
-import { getProfileData } from "src/services/getProfileData";
-import { profile } from "./profile";
-function ProfilePage() {
+import { profile } from "../Profile/profile";
+function Forwarders() {
   const initialState = {
     exploreFocused: false,
     businessFocused: false,
@@ -41,7 +40,7 @@ function ProfilePage() {
   }, []);
 
   return (
-    <div className="profile">
+    <div className="Forwarders">
       <div className="sidebar-container">
         <div className="parnity-container">
           <img src={parnityLogo} alt="" />
@@ -118,12 +117,12 @@ function ProfilePage() {
           </div>
         </div>
         <div className="heading-container">
-          <span>{profile?.data?.attributes?.Heading}</span>
+          <span>Find your next partner</span>
         </div>
         <div className="sub-heading-container">
           <span>
-            Connect with other Forwarders, Exchange business and be updated in
-            the logistics industry
+            Search for forwarders, open a quote Request or connect with people
+            online
           </span>
         </div>
         <div className="searchbox-container">
@@ -131,7 +130,7 @@ function ProfilePage() {
             <img src={search} alt="" />
             <Input
               size="large"
-              placeholder="Search by country, city or company name"
+              placeholder="Search Forwarders by country, city or company name"
             />
           </div>
         </div>
@@ -206,4 +205,4 @@ function ProfilePage() {
   );
 }
 
-export default ProfilePage;
+export default Forwarders;
